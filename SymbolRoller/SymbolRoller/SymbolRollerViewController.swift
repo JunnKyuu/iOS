@@ -37,7 +37,6 @@ class SymbolRollerViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        print("Tapped!!")
         let symbol = symbols.randomElement()!
         imageView.image = UIImage(systemName: symbol)
         label.text = symbol
