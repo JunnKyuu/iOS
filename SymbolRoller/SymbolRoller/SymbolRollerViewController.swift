@@ -17,14 +17,13 @@ class SymbolRollerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reload()
+        button.tintColor = UIColor.systemPink
         
         // To-Do
         // - 심볼에서 하나를 임의로 추출해서,
         // 이미지와 텍스트를 설정한다.
         
-        let symbol = symbols.randomElement()!
-        imageView.image = UIImage(systemName: symbol)
-        label.text = symbol
         // Do any additional setup after loading the view.
     }
     
@@ -36,10 +35,14 @@ class SymbolRollerViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-    @IBAction func buttonTapped(_ sender: Any) {
+    func reload() {
         let symbol = symbols.randomElement()!
         imageView.image = UIImage(systemName: symbol)
         label.text = symbol
+    }
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+       reload()
     }
     
     /*
