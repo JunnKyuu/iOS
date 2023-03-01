@@ -27,7 +27,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diH-ek-Brw">
-                                        <rect key="frame" x="0.0" y="60.666666666666657" width="393" height="180"/>
+                                        <rect key="frame" x="0.0" y="60.666666666666657" width="393" height="179.99999999999997"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="QKw-Do-bja"/>
                                         </constraints>
@@ -219,6 +219,9 @@
                                                     <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROM-Vn-V5V"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -241,6 +244,11 @@
                             <constraint firstItem="YLM-3F-S41" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dCj-5o-6ms"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="Vcy-QH-yh5" id="Cwu-zg-LwD"/>
+                        <outlet property="temperatureLabel" destination="Ptf-TM-Xp6" id="w6M-WL-JjT"/>
+                        <outlet property="weatherImageView" destination="diH-ek-Brw" id="xIg-fp-3tS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
