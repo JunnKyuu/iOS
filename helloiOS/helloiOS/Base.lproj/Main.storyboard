@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="185" id="3yI-0f-mlk"/>
                                     <constraint firstAttribute="width" constant="236" id="GUi-Z4-zVV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
