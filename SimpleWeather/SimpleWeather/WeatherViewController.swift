@@ -14,22 +14,20 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    let cities: [String] = ["Seoul", "Tokyo", "LA", "Seattle"]
+    let cities: [String] = ["서울", "수원", "용인", "부산"]
     
     let weathers = ["cloud.fill", "sun.max.fill", "wind", "cloud.sun.rain.fill"]
 
     @IBAction func changeButtonTapped(_ sender: Any) {
-        print("도시, 온도, 날씨 이미지 변경하자!!")
+        print("도시, 온도, 날씨 이미지 변경")
         
         cityLabel.text = cities.randomElement()!
         let imageName = weathers.randomElement()!
         weatherImageView.image = UIImage(systemName: imageName)!.withRenderingMode(.alwaysOriginal)
         
-        let randomTemp = Int.random(in: 10..<30)
+        let randomTemp = Int.random(in: -15..<3)
         temperatureLabel.text = "\(randomTemp)°"
         
         let randomCity = cities.randomElement()!
