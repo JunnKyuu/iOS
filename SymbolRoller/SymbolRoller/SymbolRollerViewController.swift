@@ -9,7 +9,7 @@ import UIKit
 
 class SymbolRollerViewController: UIViewController {
     
-    let symbols: [String] = ["sun.min", "moon", "cloud", "wind", "snowflake"]
+    let symbols: [String] = ["sun.min", "moon", "cloud", "wind", "snowflake","moon.stars"]
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var label: UILabel!
@@ -19,12 +19,6 @@ class SymbolRollerViewController: UIViewController {
         super.viewDidLoad()
         reload()
         button.tintColor = UIColor.systemPink
-        
-        // To-Do
-        // - 심볼에서 하나를 임의로 추출해서,
-        // 이미지와 텍스트를 설정한다.
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,15 +38,4 @@ class SymbolRollerViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: Any) {
        reload()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
