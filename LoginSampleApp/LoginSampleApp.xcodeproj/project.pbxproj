@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49D5D89C2EFEDD0903CA68FE /* Pods_LoginSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011C959BA0C90BCEFDAFA818 /* Pods_LoginSampleApp.framework */; };
 		F5606AF22B3D88C2005E2F21 /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5606AF12B3D88C2005E2F21 /* EnterEmailViewController.swift */; };
 		F5606AF42B3D97BF005E2F21 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5606AF32B3D97BF005E2F21 /* MainViewController.swift */; };
+		F5606AF62B3D9C5E005E2F21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5606AF52B3D9C5E005E2F21 /* GoogleService-Info.plist */; };
 		F563EE6E2B3D7FAA00AC0DFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F563EE6D2B3D7FAA00AC0DFD /* AppDelegate.swift */; };
 		F563EE702B3D7FAA00AC0DFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F563EE6F2B3D7FAA00AC0DFD /* SceneDelegate.swift */; };
 		F563EE752B3D7FAA00AC0DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F563EE732B3D7FAA00AC0DFD /* Main.storyboard */; };
@@ -18,8 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		011C959BA0C90BCEFDAFA818 /* Pods_LoginSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D957ACA7E6947CE52919FB /* Pods-LoginSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-LoginSampleApp/Pods-LoginSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F1E257C86D44392A56880F6D /* Pods-LoginSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSampleApp.release.xcconfig"; path = "Target Support Files/Pods-LoginSampleApp/Pods-LoginSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		F5606AF12B3D88C2005E2F21 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		F5606AF32B3D97BF005E2F21 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F5606AF52B3D9C5E005E2F21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F563EE6A2B3D7FAA00AC0DFD /* LoginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F563EE6D2B3D7FAA00AC0DFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F563EE6F2B3D7FAA00AC0DFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D5D89C2EFEDD0903CA68FE /* Pods_LoginSampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15DE235E76A8D081F018D4DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19D957ACA7E6947CE52919FB /* Pods-LoginSampleApp.debug.xcconfig */,
+				F1E257C86D44392A56880F6D /* Pods-LoginSampleApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2499879874147F8AB458F538 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				011C959BA0C90BCEFDAFA818 /* Pods_LoginSampleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F563EE612B3D7FAA00AC0DFD = {
 			isa = PBXGroup;
 			children = (
 				F563EE6C2B3D7FAA00AC0DFD /* LoginSampleApp */,
 				F563EE6B2B3D7FAA00AC0DFD /* Products */,
+				15DE235E76A8D081F018D4DA /* Pods */,
+				2499879874147F8AB458F538 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +95,7 @@
 				F563EE762B3D7FAB00AC0DFD /* Assets.xcassets */,
 				F563EE782B3D7FAB00AC0DFD /* LaunchScreen.storyboard */,
 				F563EE7B2B3D7FAB00AC0DFD /* Info.plist */,
+				F5606AF52B3D9C5E005E2F21 /* GoogleService-Info.plist */,
 			);
 			path = LoginSampleApp;
 			sourceTree = "<group>";
@@ -80,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F563EE7E2B3D7FAB00AC0DFD /* Build configuration list for PBXNativeTarget "LoginSampleApp" */;
 			buildPhases = (
+				9E49E2032EAD5E1B9DDE4B14 /* [CP] Check Pods Manifest.lock */,
 				F563EE662B3D7FAA00AC0DFD /* Sources */,
 				F563EE672B3D7FAA00AC0DFD /* Frameworks */,
 				F563EE682B3D7FAA00AC0DFD /* Resources */,
+				83868D05953F4AB66922DEF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +161,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				F563EE7A2B3D7FAB00AC0DFD /* LaunchScreen.storyboard in Resources */,
+				F5606AF62B3D9C5E005E2F21 /* GoogleService-Info.plist in Resources */,
 				F563EE772B3D7FAB00AC0DFD /* Assets.xcassets in Resources */,
 				F563EE752B3D7FAA00AC0DFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83868D05953F4AB66922DEF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginSampleApp/Pods-LoginSampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginSampleApp/Pods-LoginSampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginSampleApp/Pods-LoginSampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E49E2032EAD5E1B9DDE4B14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginSampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F563EE662B3D7FAA00AC0DFD /* Sources */ = {
@@ -295,6 +367,7 @@
 		};
 		F563EE7F2B3D7FAB00AC0DFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19D957ACA7E6947CE52919FB /* Pods-LoginSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,7 +386,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.JunKyuLee.LoginSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,6 +396,7 @@
 		};
 		F563EE802B3D7FAB00AC0DFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1E257C86D44392A56880F6D /* Pods-LoginSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,7 +415,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.JunKyuLee.LoginSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
