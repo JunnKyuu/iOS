@@ -34,3 +34,11 @@
 - Auto Layout 숙지
 
 ![StockRank](https://user-images.githubusercontent.com/98217364/222968717-eef3806b-a016-422b-9dea-c0bf525f19e7.gif)
+
+---
+<br>
+
+### 5. LoginSampleApp
+- UIKit을 이용한 Login UI 구현
+- FireBase로 인증
+- Spotify 로그인 화면 구현
