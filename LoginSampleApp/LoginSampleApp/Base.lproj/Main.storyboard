@@ -224,7 +224,7 @@
         <!--Main View Controller-->
         <scene sceneID="dT2-0w-2di">
             <objects>
-                <viewController id="N3M-BL-SGW" customClass="MainViewController" customModule="LoginSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="N3M-BL-SGW" customClass="MainViewController" customModule="LoginSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jam-vF-mIB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
