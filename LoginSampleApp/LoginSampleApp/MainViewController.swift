@@ -17,8 +17,8 @@ class MainViewController: UIViewController {
         
         // MainView로 왔을 때 뒤로가기하면 어색하므로 막아둠
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        
-        logoutButton.layer.cornerRadius = 30
+    
+        logoutButton.layer.cornerRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +36,13 @@ class MainViewController: UIViewController {
     }
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
         // 버튼 클릭하면 첫 화면으로 넘어가기
-        self.navigationController?.popToRootViewController(animated: true)
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            try firebaseAuth.signOut()
+            self.navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print("Error: signOut \(signOutError.localizedDescription)")
+        }
     }
 }
