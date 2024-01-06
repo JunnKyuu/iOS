@@ -17,8 +17,6 @@
 - App Lifecycle 이해
 - 클릭하면 랜덤으로 image, text가 나오는 기능
 
-![image](https://user-images.githubusercontent.com/98217364/221416589-ba39b884-a9ab-471a-9c23-3355ebe0933e.gif)
-
 ---
 
 <br>
@@ -29,8 +27,6 @@
 - 구성 요소들 간 padding, spacing
 - 클릭하면 랜덤으로 image, text가 나오는 기능
 
-![weather](https://user-images.githubusercontent.com/98217364/222036203-b4628ad1-3fb7-4490-8ae5-8435f8b58c57.gif)
-
 ---
 
 <br>
@@ -39,8 +35,6 @@
 
 - UICollectionView를 통한 리스트 구현
 - Auto Layout 숙지
-
-![StockRank](https://user-images.githubusercontent.com/98217364/222968717-eef3806b-a016-422b-9dea-c0bf525f19e7.gif)
 
 ---
 
