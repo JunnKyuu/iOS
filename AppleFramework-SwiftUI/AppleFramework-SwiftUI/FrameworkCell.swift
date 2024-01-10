@@ -15,9 +15,10 @@ struct FrameworkCell: View {
             Image(framework.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 120 , height: 120)
+            Spacer()
             Text(framework.name)
-                .font(.system(size: 18, weight: .bold, design: .default))
+                .font(.system(size: 16, weight: .bold))
+            Spacer()
         }
     }
 }
