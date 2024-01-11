@@ -26,8 +26,8 @@ struct FrameworkListView: View {
                 }
                 .padding([.top, .leading, .trailing], 16.0)
             }
+            .navigationTitle("🍎Apple Framework")
         }
-        .navigationTitle("Apple Framework")
     }
 }
 
