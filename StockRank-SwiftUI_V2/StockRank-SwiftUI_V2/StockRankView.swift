@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct StockRankView: View {
-    @State var list: [StockModel] = StockModel.list
+    @StateObject var vm = StockRankViewModel()
     
     var body: some View {
         NavigationView {
-            List($list) { $item in
+            List($vm.models) { $item in
                 ZStack {
                     NavigationLink {
-                        StockDetailView(stock: $item)
+                        StockDetailView(viewModel: vm, stock: $item)
                     } label: {
                         EmptyView()
                     }

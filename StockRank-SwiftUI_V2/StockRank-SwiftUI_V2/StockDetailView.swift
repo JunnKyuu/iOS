@@ -8,22 +8,38 @@
 import SwiftUI
 
 struct StockDetailView: View {
+    @ObservedObject var viewModel: StockRankViewModel
     @Binding var stock: StockModel
     
     var body: some View {
-        VStack {
+        VStack(spacing: 40) {
+            Text("# of My Favorites: \(viewModel.numOfFavorites)")
+                .font(.system(size: 20, weight: .bold, design: .default))
+                .foregroundColor(.white)
+            
             Image(stock.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 120)
-                .padding([.bottom], 30)
+                
             Text(stock.name)
                 .font(.system(size: 30, weight: .bold))
                 .foregroundColor(.white)
-                .padding([.bottom], 10)
+                
             Text("\(stock.price) 원")
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(stock.diff > 0 ? .red : .blue)
+            
+            Button(action: {
+                stock.isFavorite.toggle()
+            }, label: {
+                Image(systemName: "heart.fill")
+                    .resizable()
+                    .renderingMode(.template)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 80, height: 80)
+                    .foregroundColor(stock.isFavorite ? .white : .gray)
+            })
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.black)
@@ -31,5 +47,6 @@ struct StockDetailView: View {
 }
 
 #Preview {
-    StockDetailView(stock: .constant(StockModel.list[0]))
+    StockDetailView(viewModel: StockRankViewModel(),
+                        stock: .constant(StockModel.list[0]))
 }

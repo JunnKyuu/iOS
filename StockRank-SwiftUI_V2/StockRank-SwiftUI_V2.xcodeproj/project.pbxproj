@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F56833D32B513EAD001FF301 /* StockRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56833D22B513EAC001FF301 /* StockRankViewModel.swift */; };
 		F5DD57232B4FF6B90009A6D8 /* StockRank_SwiftUI_V2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD57222B4FF6B90009A6D8 /* StockRank_SwiftUI_V2App.swift */; };
 		F5DD57272B4FF6BA0009A6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DD57262B4FF6BA0009A6D8 /* Assets.xcassets */; };
 		F5DD572A2B4FF6BA0009A6D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DD57292B4FF6BA0009A6D8 /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F56833D22B513EAC001FF301 /* StockRankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankViewModel.swift; sourceTree = "<group>"; };
 		F5DD571F2B4FF6B90009A6D8 /* StockRank-SwiftUI_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockRank-SwiftUI_V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DD57222B4FF6B90009A6D8 /* StockRank_SwiftUI_V2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRank_SwiftUI_V2App.swift; sourceTree = "<group>"; };
 		F5DD57262B4FF6BA0009A6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				F5DD57222B4FF6B90009A6D8 /* StockRank_SwiftUI_V2App.swift */,
 				F5DD57322B4FF7330009A6D8 /* StockRankRow.swift */,
 				F5DD57342B4FFDDE0009A6D8 /* StockRankView.swift */,
+				F56833D22B513EAC001FF301 /* StockRankViewModel.swift */,
 				F5DD57362B5001220009A6D8 /* StockDetailView.swift */,
 				F5DD57302B4FF7000009A6D8 /* StockModel.swift */,
 				F5DD57262B4FF6BA0009A6D8 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				F5DD57352B4FFDDF0009A6D8 /* StockRankView.swift in Sources */,
 				F5DD57232B4FF6B90009A6D8 /* StockRank_SwiftUI_V2App.swift in Sources */,
 				F5DD57312B4FF7000009A6D8 /* StockModel.swift in Sources */,
+				F56833D32B513EAD001FF301 /* StockRankViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
