@@ -16,20 +16,16 @@ struct StockDetailView: View {
             Text("# of My Favorites: \(viewModel.numOfFavorites)")
                 .font(.system(size: 20, weight: .bold, design: .default))
                 .foregroundColor(.white)
-            
             Image(stock.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 120)
-                
             Text(stock.name)
                 .font(.system(size: 30, weight: .bold))
                 .foregroundColor(.white)
-                
             Text("\(stock.price) 원")
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(stock.diff > 0 ? .red : .blue)
-            
             Button(action: {
                 stock.isFavorite.toggle()
             }, label: {
@@ -38,7 +34,7 @@ struct StockDetailView: View {
                     .renderingMode(.template)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 80, height: 80)
-                    .foregroundColor(stock.isFavorite ? .white : .gray)
+                    .foregroundColor(stock.isFavorite ? .pink : .white)
             })
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

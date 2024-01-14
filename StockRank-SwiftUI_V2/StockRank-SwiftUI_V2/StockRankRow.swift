@@ -36,17 +36,12 @@ struct StockRankRow: View {
             }
             .padding([.leading], 10)
             Spacer()
-            Button(action: {
-                stockModel.isFavorite.toggle()
-            }, label: {
-                Image(systemName: "heart.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(stockModel.isFavorite ? .white : .gray)
-                    .padding([.trailing], 20)
-            })
-            
+            Image(systemName: "heart.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 40, height: 40)
+                .foregroundColor(stockModel.isFavorite ? .pink : .white)
+                .padding([.trailing], 20)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.black)
