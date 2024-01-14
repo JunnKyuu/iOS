@@ -13,7 +13,7 @@ struct StockRankView: View {
     var body: some View {
         NavigationView {
             List($vm.models) { $item in
-                ZStack {
+                ZStack { 
                     NavigationLink {
                         StockDetailView(viewModel: vm, stock: $item)
                     } label: {
