@@ -15,7 +15,7 @@ struct FirstView: View {
             VStack(spacing: 30) {
                 Text("Current Age: \(userProfile.age)")
                 NavigationLink {
-                    
+                    SecondView()
                 } label: {
                     Text("Second View")
                 }
@@ -31,5 +31,5 @@ struct FirstView: View {
 }
 
 #Preview {
-    FirstView()
+    FirstView().environmentObject(UserProfileSettings())
 }
