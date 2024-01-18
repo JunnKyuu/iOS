@@ -14,6 +14,7 @@ struct SecondView: View {
                 ThirdView()
             } label: {
                 Text("Third View")
+                    .font(.system(size: 20, weight: .bold))
             }
         }
         .navigationTitle("Second View")

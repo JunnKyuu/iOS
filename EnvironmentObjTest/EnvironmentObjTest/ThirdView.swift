@@ -18,6 +18,7 @@ struct ThirdView: View {
                 userProfile.haveBirthDayParty()
             } label: {
                 Text("Having Birthday Party")
+                    .font(.system(size: 20, weight: .bold))
             }
         }
         .navigationTitle("Third View")

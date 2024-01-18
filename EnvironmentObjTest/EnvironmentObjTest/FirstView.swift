@@ -18,6 +18,7 @@ struct FirstView: View {
                     SecondView()
                 } label: {
                     Text("Second View")
+                        .font(.system(size: 20, weight: .bold))
                 }
                 Button {
                     userProfile.haveBirthDayParty()
