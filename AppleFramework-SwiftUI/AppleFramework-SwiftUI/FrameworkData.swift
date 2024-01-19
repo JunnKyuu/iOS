@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct AppleFramework: Hashable {
+struct AppleFramework: Hashable, Identifiable {
+    var id: UUID = UUID()
     let name: String
     let imageName: String
     let urlString: String
