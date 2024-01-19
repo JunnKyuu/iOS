@@ -34,7 +34,7 @@ struct FrameworkDetailView: View {
                     .foregroundColor(.white)
             })
             .frame(maxWidth: .infinity, minHeight: 80)
-            .background(.pink)
+            .background(.blue)
             .cornerRadius(40)
         }
         .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
