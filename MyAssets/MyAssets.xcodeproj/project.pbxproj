@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F55F09822B5CFB09008896AF /* NavigationBarWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F09812B5CFB09008896AF /* NavigationBarWithButton.swift */; };
 		F59F7AC32B4582AF00DB44D5 /* MyAssetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F7AC22B4582AF00DB44D5 /* MyAssetsApp.swift */; };
 		F59F7AC52B4582AF00DB44D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F7AC42B4582AF00DB44D5 /* ContentView.swift */; };
 		F59F7AC72B4582B000DB44D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59F7AC62B4582B000DB44D5 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F55F09812B5CFB09008896AF /* NavigationBarWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithButton.swift; sourceTree = "<group>"; };
 		F59F7ABF2B4582AF00DB44D5 /* MyAssets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59F7AC22B4582AF00DB44D5 /* MyAssetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAssetsApp.swift; sourceTree = "<group>"; };
 		F59F7AC42B4582AF00DB44D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				F59F7AC22B4582AF00DB44D5 /* MyAssetsApp.swift */,
 				F59F7AC42B4582AF00DB44D5 /* ContentView.swift */,
+				F55F09812B5CFB09008896AF /* NavigationBarWithButton.swift */,
 				F59F7AC62B4582B000DB44D5 /* Assets.xcassets */,
 				F59F7AC82B4582B000DB44D5 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55F09822B5CFB09008896AF /* NavigationBarWithButton.swift in Sources */,
 				F59F7AC52B4582AF00DB44D5 /* ContentView.swift in Sources */,
 				F59F7AC32B4582AF00DB44D5 /* MyAssetsApp.swift in Sources */,
 			);
