@@ -11,48 +11,39 @@ struct NavigationBarWithButton: ViewModifier {
     var title: String = ""
     
     func body(content: Content) -> some View {
-        return content.navigationBarItems(
-            leading: Text(title)
-                .font(.system(size: 24, weight: .bold))
-                .padding(),
-            trailing: Button(
-                action: {
-                print("자산추가버튼 Tapped")
-            }, label: {
-                Image(systemName: "plus")
-                Text("자산추가")
-                    .font(.system(size: 12))
-            })
-            .accentColor(.black)
-            .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
-            .overlay(
-                RoundedRectangle(cornerRadius: 10).stroke(Color.black)
+        return content
+            .navigationBarItems(
+                leading: Text(title)
+                    .font(.system(size: 24, weight: .bold)),
+                trailing: Button(
+                    action: {
+                        print("Button Tapped!")
+                    },
+                    label: {
+                        Image(systemName: "plus")
+                        Text("자산추가")
+                            .font(.system(size: 18))
+                    }
+                )
+                .accentColor(.black)
+                .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8 ))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20).stroke(Color.black)
+                )
             )
-        )
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithTransparentBackground()
-            appearance.backgroundColor = UIColor(white: 1, alpha: 0.5)
-            UINavigationBar.appearance()
-                .standardAppearance = appearance
-            UINavigationBar.appearance()
-                .compactAppearance = appearance
-            UINavigationBar.appearance()
-                .scrollEdgeAppearance = appearance
-        }
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 extension View {
-    func navigationBarWithButtonStyle(_ title: String) -> some View {
+    func navigationBarWithButton(_ title: String) -> some View {
         return self.modifier(NavigationBarWithButton(title: title))
     }
 }
 
 #Preview {
     NavigationView {
-        Color.gray.edgesIgnoringSafeArea(.all)
-            .navigationBarWithButtonStyle("내 자산")
+        Color.white.edgesIgnoringSafeArea(.all)
+            .navigationBarWithButton("내 자산")
     }
 }
