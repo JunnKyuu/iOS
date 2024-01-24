@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationBarWithButton: ViewModifier {
+struct NavigationBarWithButtonStyle: ViewModifier {
     var title: String = ""
     
     func body(content: Content) -> some View {
@@ -37,7 +37,7 @@ struct NavigationBarWithButton: ViewModifier {
 
 extension View {
     func navigationBarWithButton(_ title: String) -> some View {
-        return self.modifier(NavigationBarWithButton(title: title))
+        return self.modifier(NavigationBarWithButtonStyle(title: title))
     }
 }
 

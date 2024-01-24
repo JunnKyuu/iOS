@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F55F09862B5D31D7008896AF /* NavigationBarWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F09852B5D31D7008896AF /* NavigationBarWithButton.swift */; };
+		F55F09862B5D31D7008896AF /* NavigationBarWithButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F09852B5D31D7008896AF /* NavigationBarWithButtonStyle.swift */; };
 		F55F09882B5D368B008896AF /* AssetMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F09872B5D368B008896AF /* AssetMenu.swift */; };
+		F570DA742B609F19004E59C1 /* AssetMenuButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570DA732B609F19004E59C1 /* AssetMenuButtonStyle.swift */; };
+		F570DA762B60A5DD004E59C1 /* AssetMenuGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570DA752B60A5DD004E59C1 /* AssetMenuGridView.swift */; };
+		F570DA782B60A75B004E59C1 /* AssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F570DA772B60A75B004E59C1 /* AssetView.swift */; };
 		F59F7AC32B4582AF00DB44D5 /* MyAssetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F7AC22B4582AF00DB44D5 /* MyAssetsApp.swift */; };
 		F59F7AC52B4582AF00DB44D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F7AC42B4582AF00DB44D5 /* ContentView.swift */; };
 		F59F7AC72B4582B000DB44D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59F7AC62B4582B000DB44D5 /* Assets.xcassets */; };
@@ -16,8 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F55F09852B5D31D7008896AF /* NavigationBarWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithButton.swift; sourceTree = "<group>"; };
+		F55F09852B5D31D7008896AF /* NavigationBarWithButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithButtonStyle.swift; sourceTree = "<group>"; };
 		F55F09872B5D368B008896AF /* AssetMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMenu.swift; sourceTree = "<group>"; };
+		F570DA732B609F19004E59C1 /* AssetMenuButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMenuButtonStyle.swift; sourceTree = "<group>"; };
+		F570DA752B60A5DD004E59C1 /* AssetMenuGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMenuGridView.swift; sourceTree = "<group>"; };
+		F570DA772B60A75B004E59C1 /* AssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetView.swift; sourceTree = "<group>"; };
 		F59F7ABF2B4582AF00DB44D5 /* MyAssets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59F7AC22B4582AF00DB44D5 /* MyAssetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAssetsApp.swift; sourceTree = "<group>"; };
 		F59F7AC42B4582AF00DB44D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,7 +63,10 @@
 			children = (
 				F59F7AC22B4582AF00DB44D5 /* MyAssetsApp.swift */,
 				F59F7AC42B4582AF00DB44D5 /* ContentView.swift */,
-				F55F09852B5D31D7008896AF /* NavigationBarWithButton.swift */,
+				F55F09852B5D31D7008896AF /* NavigationBarWithButtonStyle.swift */,
+				F570DA732B609F19004E59C1 /* AssetMenuButtonStyle.swift */,
+				F570DA752B60A5DD004E59C1 /* AssetMenuGridView.swift */,
+				F570DA772B60A75B004E59C1 /* AssetView.swift */,
 				F55F09872B5D368B008896AF /* AssetMenu.swift */,
 				F59F7AC62B4582B000DB44D5 /* Assets.xcassets */,
 				F59F7AC82B4582B000DB44D5 /* Preview Content */,
@@ -143,10 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55F09862B5D31D7008896AF /* NavigationBarWithButton.swift in Sources */,
+				F570DA762B60A5DD004E59C1 /* AssetMenuGridView.swift in Sources */,
+				F55F09862B5D31D7008896AF /* NavigationBarWithButtonStyle.swift in Sources */,
+				F570DA782B60A75B004E59C1 /* AssetView.swift in Sources */,
 				F59F7AC52B4582AF00DB44D5 /* ContentView.swift in Sources */,
 				F59F7AC32B4582AF00DB44D5 /* MyAssetsApp.swift in Sources */,
 				F55F09882B5D368B008896AF /* AssetMenu.swift in Sources */,
+				F570DA742B609F19004E59C1 /* AssetMenuButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
