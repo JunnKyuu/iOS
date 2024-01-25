@@ -16,7 +16,6 @@ struct AssetView: View {
                     AssetMenuGridView()
                 }
             }
-            .background(Color.gray.opacity(0.2))
             .navigationBarWithButton("내 자산")
         }
     }

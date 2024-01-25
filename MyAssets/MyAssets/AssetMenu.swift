@@ -49,7 +49,7 @@ enum AssetMenu: String, Identifiable, Decodable {
         case .account:
             return "계좌"
         case .investment:
-            return "투지"
+            return "투자"
         case .loan:
             return "대출"
         case .insurance:

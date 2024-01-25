@@ -14,15 +14,14 @@ struct AssetMenuButtonStyle: ButtonStyle {
         VStack {
             Image(systemName: menu.systemImageName)
                 .resizable()
-                .frame(width: 30, height: 30)
+                .frame(width: 23, height: 23)
                 .padding([.leading, .trailing], 10)
             Text(menu.title)
-                .font(.system(size: 12, weight: .bold))
+                .font(.system(size: 13, weight: .bold))
         }
-        .padding()
-        .foregroundColor(.blue)
+        .padding(13)
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black))
         .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
