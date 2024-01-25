@@ -1,0 +1,148 @@
+//
+//  TaxView.swift
+//  swiftUI_review
+//
+//  Created by JunKyu Lee on 1/24/24.
+//
+
+import SwiftUI
+
+struct TaxView: View {
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 20) {
+                    Spacer()
+//                    1
+                    HStack {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("이달의 돈 버는 혜택")
+                                .font(.system(size: 20, weight: .bold))
+                                .foregroundColor(.white)
+                            Text("네이버페이 8,000포인트 증정")
+                        }
+                        .padding([.leading, .top, .bottom],20)
+                        Spacer()
+                        Image(systemName: "bitcoinsign.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 70, height: 70)
+                            .padding([.trailing],20)
+                            .foregroundColor(.white)
+                    }
+                    .background(Color.blue)
+                    .frame(maxWidth: .infinity)
+                    Spacer()
+                    Text("이런 서비스도 있어요")
+                        .multilineTextAlignment(.leading)
+                        .font(.system(size: 25, weight: .bold))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.leading],20)
+//                    2
+                    Button {
+                        print("Button Tapped")
+                    } label: {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 30) {
+                                Text("이준규님의 환급이 진행중이에요")
+                                    .font(.system(size: 25, weight: .bold))
+                                    .foregroundColor(.black)
+                                Text("내 진행상태 확인하기")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.gray)
+                            }
+                            .frame(maxWidth: 230, minHeight: 80, alignment: .leading)
+                            VStack {
+                                Spacer()
+                                Image(systemName: "alarm.waves.left.and.right.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 100, height: 100)
+                                    .foregroundColor(.blue)
+                                    .padding([.bottom], 15)
+                            }
+                        }
+                        .frame(width: 360, height: 180)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    }
+//                    3
+                    HStack(spacing: 15) {
+                        Button {
+                            print("Button Tapped")
+                        } label: {
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text("부가세 신고")
+                                    .font(.system(size: 25, weight: .bold))
+                                    .foregroundColor(.black)
+                                Text("부가세 확인해보기")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.gray)
+                                HStack {
+                                    Spacer()
+                                    Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 50, height: 50)
+                                }
+                            }
+                            .padding([.leading],20)
+                        }
+                        .frame(width: 170, height: 150)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+//                        3
+                        Button {
+                            print("Button Tapped")
+                        } label: {
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text("연말정산 환급")
+                                    .font(.system(size: 25, weight: .bold))
+                                    .foregroundColor(.black)
+                                Text("가족이 쓴 돈 받기")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.gray)
+                                HStack {
+                                    Spacer()
+                                    Image(systemName: "plus.magnifyingglass")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 50, height: 50)
+                                }
+                            }
+                            .padding([.leading],20)
+                        }
+                        .frame(width: 170, height: 150)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    }
+                    .frame(width: 360, height: 150)
+//                4
+                    Spacer()
+                    Text("쩜. 돈이 되는 이야기")
+                        .multilineTextAlignment(.leading)
+                        .font(.system(size: 25, weight: .bold))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.leading],20)
+//                    5
+                    Spacer()
+                    VStack {
+                        Button {
+                            print("Button Tapped")
+                        } label: {
+                            
+                        }
+                    }
+                }
+                
+                .background(Color.gray.opacity(0.15))
+                .padding([.top],10)
+            }
+            .navigationBarWithButton("삼쩜삼")
+        }
+    }
+}
+
+#Preview {
+    TaxView()
+}
