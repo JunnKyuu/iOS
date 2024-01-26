@@ -23,10 +23,10 @@ struct TaxView: View {
                         }
                         .padding([.leading, .top, .bottom],20)
                         Spacer()
-                        Image(systemName: "bitcoinsign.circle")
+                        Image(systemName: "dollarsign.circle.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 70, height: 70)
+                            .frame(width: 60, height: 60)
                             .padding([.trailing],20)
                             .foregroundColor(.white)
                     }
@@ -35,7 +35,7 @@ struct TaxView: View {
                     Spacer()
                     Text("이런 서비스도 있어요")
                         .multilineTextAlignment(.leading)
-                        .font(.system(size: 25, weight: .bold))
+                        .font(.system(size: 20, weight: .bold))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading],20)
 //                    2
@@ -45,11 +45,14 @@ struct TaxView: View {
                         HStack {
                             VStack(alignment: .leading, spacing: 30) {
                                 Text("이준규님의 환급이 진행중이에요")
-                                    .font(.system(size: 25, weight: .bold))
+                                    .multilineTextAlignment(.leading)
+                                    .font(.system(size: 20, weight: .bold))
                                     .foregroundColor(.black)
+                                    .padding([.leading],10)
                                 Text("내 진행상태 확인하기")
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 15))
                                     .foregroundColor(.gray)
+                                    .padding([.leading],10)
                             }
                             .frame(maxWidth: 230, minHeight: 80, alignment: .leading)
                             VStack {
@@ -57,12 +60,12 @@ struct TaxView: View {
                                 Image(systemName: "alarm.waves.left.and.right.fill")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 100, height: 100)
-                                    .foregroundColor(.blue)
+                                    .frame(width: 80, height: 80)
+                                    .foregroundColor(.yellow)
                                     .padding([.bottom], 15)
                             }
                         }
-                        .frame(width: 360, height: 180)
+                        .frame(width: 350, height: 140)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
@@ -73,22 +76,24 @@ struct TaxView: View {
                         } label: {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text("부가세 신고")
-                                    .font(.system(size: 25, weight: .bold))
+                                    .font(.system(size: 20, weight: .bold))
                                     .foregroundColor(.black)
                                 Text("부가세 확인해보기")
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 15))
                                     .foregroundColor(.gray)
                                 HStack {
                                     Spacer()
                                     Image(systemName: "rectangle.and.pencil.and.ellipsis")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 40, height: 40)
+                                        .foregroundColor(.black)
+                                        .padding([.trailing, .top], 10)
                                 }
                             }
                             .padding([.leading],20)
                         }
-                        .frame(width: 170, height: 150)
+                        .frame(width: 170, height: 140)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
 //                        3
@@ -97,22 +102,24 @@ struct TaxView: View {
                         } label: {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text("연말정산 환급")
-                                    .font(.system(size: 25, weight: .bold))
+                                    .font(.system(size: 20, weight: .bold))
                                     .foregroundColor(.black)
                                 Text("가족이 쓴 돈 받기")
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 15))
                                     .foregroundColor(.gray)
                                 HStack {
                                     Spacer()
                                     Image(systemName: "plus.magnifyingglass")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 40, height: 40)
+                                        .foregroundColor(.black)
+                                        .padding([.trailing, .top], 10)
                                 }
                             }
                             .padding([.leading],20)
                         }
-                        .frame(width: 170, height: 150)
+                        .frame(width: 170, height: 140)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
@@ -121,7 +128,7 @@ struct TaxView: View {
                     Spacer()
                     Text("쩜. 돈이 되는 이야기")
                         .multilineTextAlignment(.leading)
-                        .font(.system(size: 25, weight: .bold))
+                        .font(.system(size: 20, weight: .bold))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading],20)
 //                    5

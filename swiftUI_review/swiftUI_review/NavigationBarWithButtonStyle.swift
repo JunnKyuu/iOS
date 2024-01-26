@@ -23,6 +23,7 @@ struct NavigationBarWithButtonStyle: ViewModifier {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 35, height: 35)
+                        .foregroundColor(.yellow)
                 })
                 .accentColor(.black)
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
