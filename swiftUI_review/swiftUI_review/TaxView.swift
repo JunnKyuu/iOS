@@ -13,7 +13,7 @@ struct TaxView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     Spacer()
-//                    1
+
                     HStack {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("이달의 돈 버는 혜택")
@@ -38,7 +38,7 @@ struct TaxView: View {
                         .font(.system(size: 20, weight: .bold))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading],20)
-//                    2
+
                     Button {
                         print("Button Tapped")
                     } label: {
@@ -96,7 +96,7 @@ struct TaxView: View {
                         .frame(width: 170, height: 140)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
-//                        3
+
                         Button {
                             print("Button Tapped")
                         } label: {
@@ -124,22 +124,14 @@ struct TaxView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
                     .frame(width: 360, height: 150)
-//                4
+
                     Spacer()
                     Text("쩜. 돈이 되는 이야기")
                         .multilineTextAlignment(.leading)
                         .font(.system(size: 20, weight: .bold))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading],20)
-//                    5
-                    Spacer()
-                    VStack {
-                        Button {
-                            print("Button Tapped")
-                        } label: {
-                            
-                        }
-                    }
+
                 }
                 
                 .background(Color.gray.opacity(0.15))
