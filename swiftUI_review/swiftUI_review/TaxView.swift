@@ -131,6 +131,25 @@ struct TaxView: View {
                         .font(.system(size: 20, weight: .bold))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading],20)
+                    
+                    VStack(spacing: 10) {
+                        HStack {
+                            Image(systemName: "bell.fill")
+                            Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
+                        }
+                        HStack {
+                            Image(systemName: "bell.fill")
+                            Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
+                        }
+                        HStack {
+                            Image(systemName: "bell.fill")
+                            Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
+                        }
+                    }
+                    .frame(width: 360 , height: 150)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
 
                 }
                 
