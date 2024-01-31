@@ -58,9 +58,34 @@
 
 <br>
 
+
 ### 7. DataFlow-SwiftUI
 
 - SwiftUI의 @State, @Binding을 사용한 music player UI 구현
+
+---
+
+<br>
+
+### 8. AppleFramework-SwiftUI
+
+- SwiftUI의 Grid, NavigationView를 통한 AppleFramework 구현
+
+---
+
+<br>
+
+### 9. EnvironmentObjTest
+
+- SwiftUI의 @Environment 실습
+
+---
+
+<br>
+
+### 10. MyAssets
+
+- SwiftUI의 TabView, Stack, ScrollView 연습
 
 ---
 
