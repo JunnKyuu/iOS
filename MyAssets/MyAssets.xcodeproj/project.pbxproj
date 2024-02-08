@@ -16,6 +16,9 @@
 		F59F7AC52B4582AF00DB44D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F7AC42B4582AF00DB44D5 /* ContentView.swift */; };
 		F59F7AC72B4582B000DB44D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59F7AC62B4582B000DB44D5 /* Assets.xcassets */; };
 		F59F7ACA2B4582B000DB44D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59F7AC92B4582B000DB44D5 /* Preview Assets.xcassets */; };
+		F5A23D822B74AA4C00F0BED6 /* AssetBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23D812B74AA4C00F0BED6 /* AssetBanner.swift */; };
+		F5A23D852B74AACE00F0BED6 /* BannerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23D842B74AACE00F0BED6 /* BannerCard.swift */; };
+		F5A23D882B74AEE600F0BED6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23D872B74AEE600F0BED6 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		F59F7AC42B4582AF00DB44D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F59F7AC62B4582B000DB44D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F59F7AC92B4582B000DB44D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5A23D812B74AA4C00F0BED6 /* AssetBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetBanner.swift; sourceTree = "<group>"; };
+		F5A23D842B74AACE00F0BED6 /* BannerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCard.swift; sourceTree = "<group>"; };
+		F5A23D872B74AEE600F0BED6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +70,11 @@
 				F59F7AC22B4582AF00DB44D5 /* MyAssetsApp.swift */,
 				F59F7AC42B4582AF00DB44D5 /* ContentView.swift */,
 				F55F09852B5D31D7008896AF /* NavigationBarWithButtonStyle.swift */,
-				F570DA732B609F19004E59C1 /* AssetMenuButtonStyle.swift */,
-				F570DA752B60A5DD004E59C1 /* AssetMenuGridView.swift */,
+				F5A23D842B74AACE00F0BED6 /* BannerCard.swift */,
+				F5A23D872B74AEE600F0BED6 /* PageViewController.swift */,
 				F570DA772B60A75B004E59C1 /* AssetView.swift */,
-				F55F09872B5D368B008896AF /* AssetMenu.swift */,
+				F5A23D832B74AA6600F0BED6 /* Entities */,
+				F5A23D862B74AAE000F0BED6 /* AssetMenu */,
 				F59F7AC62B4582B000DB44D5 /* Assets.xcassets */,
 				F59F7AC82B4582B000DB44D5 /* Preview Content */,
 			);
@@ -80,6 +87,24 @@
 				F59F7AC92B4582B000DB44D5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5A23D832B74AA6600F0BED6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23D812B74AA4C00F0BED6 /* AssetBanner.swift */,
+				F55F09872B5D368B008896AF /* AssetMenu.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F5A23D862B74AAE000F0BED6 /* AssetMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F570DA732B609F19004E59C1 /* AssetMenuButtonStyle.swift */,
+				F570DA752B60A5DD004E59C1 /* AssetMenuGridView.swift */,
+			);
+			path = AssetMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +178,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F570DA762B60A5DD004E59C1 /* AssetMenuGridView.swift in Sources */,
+				F5A23D882B74AEE600F0BED6 /* PageViewController.swift in Sources */,
 				F55F09862B5D31D7008896AF /* NavigationBarWithButtonStyle.swift in Sources */,
+				F5A23D822B74AA4C00F0BED6 /* AssetBanner.swift in Sources */,
 				F570DA782B60A75B004E59C1 /* AssetView.swift in Sources */,
 				F59F7AC52B4582AF00DB44D5 /* ContentView.swift in Sources */,
 				F59F7AC32B4582AF00DB44D5 /* MyAssetsApp.swift in Sources */,
 				F55F09882B5D368B008896AF /* AssetMenu.swift in Sources */,
+				F5A23D852B74AACE00F0BED6 /* BannerCard.swift in Sources */,
 				F570DA742B609F19004E59C1 /* AssetMenuButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
