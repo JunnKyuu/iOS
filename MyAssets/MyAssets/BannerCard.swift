@@ -24,5 +24,5 @@ struct BannerCard: View {
 }
 
 #Preview {
-    BannerCard(banner: AssetBanner(title: "공지사항", description: "추가된 공지사항을 확인하세요", background: .cyan))
+    BannerCard(banner: AssetBanner(title: "공지사항", description: "추가된 공지사항을 확인하세요", background: .yellow))
 }
