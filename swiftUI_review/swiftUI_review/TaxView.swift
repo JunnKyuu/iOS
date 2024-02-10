@@ -132,39 +132,41 @@ struct TaxView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading],20)
                     
-                    VStack(spacing: 20) {
+                    VStack(spacing: 10) {
                         HStack(spacing: 10) {
-                            Image(systemName: "bell.fill")
+                            Image(systemName: "circle.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
+                                .frame(width: 20, height: 20)
                             Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
                                 .font(.system(size: 18))
                         }
+                        .padding([.top, .leading, .trailing],10)
                         HStack(spacing: 10) {
-                            Image(systemName: "bell.fill")
+                            Image(systemName: "circle.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
+                                .frame(width: 20, height: 20)
                             Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
                                 .font(.system(size: 18))
                         }
+                        .padding([.top, .leading, .trailing],10)
                         HStack(spacing: 10) {
-                            Image(systemName: "bell.fill")
+                            Image(systemName: "circle.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
+                                .frame(width: 20, height: 20)
                             Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
                                 .font(.system(size: 18))
                         }
+                        .padding([.top, .leading, .trailing],10)
                     }
                     .frame(width: 360 , height: 150)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     
-
+                    Spacer()
                 }
-                
                 .background(Color.gray.opacity(0.15))
                 .padding([.top],10)
             }
