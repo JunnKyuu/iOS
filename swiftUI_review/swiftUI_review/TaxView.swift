@@ -124,7 +124,6 @@ struct TaxView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
                     .frame(width: 360, height: 150)
-
                     Spacer()
                     Text("쩜. 돈이 되는 이야기")
                         .multilineTextAlignment(.leading)
@@ -138,33 +137,47 @@ struct TaxView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 20, height: 20)
-                            Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
+                            Text("연말정산 환급금 언제 들어오나요?")
                                 .font(.system(size: 18))
+                            Spacer()
                         }
-                        .padding([.top, .leading, .trailing],10)
+                        .padding([.top, .leading, .trailing],20)
                         HStack(spacing: 10) {
                             Image(systemName: "circle.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 20, height: 20)
-                            Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
+                            Text("각종 잠든 돈 찾는 법 총정리")
                                 .font(.system(size: 18))
+                            Spacer()
                         }
-                        .padding([.top, .leading, .trailing],10)
+                        .frame(maxWidth: .infinity)
+                        .padding([.top, .leading, .trailing],20)
                         HStack(spacing: 10) {
                             Image(systemName: "circle.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 20, height: 20)
-                            Text("일상생활이 더 편리해져요. 민생규제 혁신방안 BEST 5")
+                            Text("알뜰교통카드 vs 기후동행카드")
                                 .font(.system(size: 18))
+                            Spacer()
                         }
-                        .padding([.top, .leading, .trailing],10)
+                        .padding([.top, .leading, .trailing],20)
+                        Button(action: {
+                            print("Button Clicked")
+                        }, label: {
+                            Text("돈이 되는 이야기 더 보기")
+                                .font(.system(size: 20, weight: .bold))
+                                .foregroundColor(.white)
+                        })
+                        .frame(maxWidth: .infinity, minHeight: 50)
+                        .background(.blue)
+                        .cornerRadius(20)
+                        .padding([.top, .trailing, .leading], 20)
                     }
-                    .frame(width: 360 , height: 150)
+                    .frame(width: 360 , height: 250)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                    
                     Spacer()
                 }
                 .background(Color.gray.opacity(0.15))
