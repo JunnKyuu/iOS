@@ -69,7 +69,6 @@ struct TaxView: View {
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
-//                    3
                     HStack(spacing: 15) {
                         Button {
                             print("Button Tapped")

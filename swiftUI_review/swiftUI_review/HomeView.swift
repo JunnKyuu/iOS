@@ -38,12 +38,6 @@ struct HomeView: View {
                     Text("돈찾기")
                 }
                 .tag(Tab.service)
-            Color.green
-                .tabItem {
-                    Image(systemName: "wallet.pass.fill")
-                    Text("월급찾기")
-                }
-                .tag(Tab.search)
             Color.blue
                 .tabItem {
                     Image(systemName: "tablecells.fill.badge.ellipsis")
