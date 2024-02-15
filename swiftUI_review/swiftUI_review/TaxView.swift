@@ -171,7 +171,7 @@ struct TaxView: View {
                         })
                         .frame(maxWidth: .infinity, minHeight: 50)
                         .background(.blue)
-                        .cornerRadius(20)
+                        .cornerRadius(10)
                         .padding([.top, .trailing, .leading], 20)
                     }
                     .frame(width: 360 , height: 250)

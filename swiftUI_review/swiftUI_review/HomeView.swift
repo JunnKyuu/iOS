@@ -26,7 +26,7 @@ struct HomeView: View {
                     Text("세금")
                 }
                 .tag(Tab.tax)
-            Color.orange
+            YearEndVIew()
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("연말정산")

@@ -14,6 +14,7 @@
 		F544F6FF2B60B47200DED0D2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544F6FE2B60B47200DED0D2 /* HomeView.swift */; };
 		F544F7012B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544F7002B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift */; };
 		F544F7032B60BD4F00DED0D2 /* TaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544F7022B60BD4F00DED0D2 /* TaxView.swift */; };
+		F5C2F3312B7C99E1008FE686 /* YearEndVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C2F3302B7C99E1008FE686 /* YearEndVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		F544F6FE2B60B47200DED0D2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F544F7002B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithButtonStyle.swift; sourceTree = "<group>"; };
 		F544F7022B60BD4F00DED0D2 /* TaxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxView.swift; sourceTree = "<group>"; };
+		F5C2F3302B7C99E1008FE686 /* YearEndVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearEndVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F544F6EC2B60B39500DED0D2 /* swiftUI_reviewApp.swift */,
 				F544F6EE2B60B39500DED0D2 /* ContentView.swift */,
 				F544F6FE2B60B47200DED0D2 /* HomeView.swift */,
+				F5C2F3302B7C99E1008FE686 /* YearEndVIew.swift */,
 				F544F7022B60BD4F00DED0D2 /* TaxView.swift */,
 				F544F7002B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift */,
 				F544F6F02B60B39600DED0D2 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				F544F6EF2B60B39500DED0D2 /* ContentView.swift in Sources */,
 				F544F6ED2B60B39500DED0D2 /* swiftUI_reviewApp.swift in Sources */,
 				F544F7012B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift in Sources */,
+				F5C2F3312B7C99E1008FE686 /* YearEndVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
