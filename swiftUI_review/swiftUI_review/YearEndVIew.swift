@@ -68,6 +68,14 @@ struct YearEndVIew: View {
             .frame(maxWidth: .infinity)
             .background(Color(hex: "#1C46B5"))
             .cornerRadius(10)
+//            연말정산 더 받기
+            HStack(spacing: 10) {
+                Image(systemName: "dollarsign.circle")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30, height: 30)
+                Text("연말정산 더 받을 수 있어요")
+            }
         }
         .cornerRadius(10)
         .padding(20)
