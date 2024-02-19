@@ -75,7 +75,12 @@ struct YearEndVIew: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
                 Text("연말정산 더 받을 수 있어요")
+                    .font(.system(size: 18, weight: .bold, design: .default))
+                    .foregroundColor(Color(hex: "#000000"))
             }
+            .frame(maxWidth: .infinity)
+            .background(Color(hex: "#dddddd"))
+            .cornerRadius(10)
         }
         .cornerRadius(10)
         .padding(20)
