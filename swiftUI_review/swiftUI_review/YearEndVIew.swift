@@ -77,10 +77,23 @@ struct YearEndVIew: View {
                 Text("연말정산 더 받을 수 있어요")
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(Color(hex: "#000000"))
+                Spacer()
             }
             .frame(maxWidth: .infinity)
-            .background(Color(hex: "#dddddd"))
             .cornerRadius(10)
+            .padding([.top], 30)
+            VStack {
+                HStack(spacing: 30) {
+                    Image(systemName: "figure.2.and.child.holdinghands")
+                    VStack(alignment: .leading) {
+                        Text("가족이 쓴 돈 합치고")
+                        Text("18만원 더 받기")
+                    }
+                    Spacer()
+                }
+                .padding()
+                .background(Color(hex: "#dddddd"))
+            }
         }
         .cornerRadius(10)
         .padding(20)
