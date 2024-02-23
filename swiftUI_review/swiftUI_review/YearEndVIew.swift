@@ -10,7 +10,7 @@ import SwiftUI
 struct YearEndVIew: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 10) {
+            VStack(spacing: 25) {
     //            연말정산 확인하기
                 VStack(spacing: 30) {
                     HStack(spacing: 10) {
@@ -69,7 +69,7 @@ struct YearEndVIew: View {
                 .frame(maxWidth: .infinity)
                 .background(Color(hex: "#1C46B5"))
                 .cornerRadius(10)
-    //            연말정산 더 받기
+    //            연말정산 더 받기이
                 HStack(spacing: 10) {
                     Image(systemName: "dollarsign.circle")
                         .resizable()
@@ -104,14 +104,14 @@ struct YearEndVIew: View {
                             .stroke(Color(hex: "#dddddd"))
                     )
                     HStack(spacing: 30) {
-                        Image(systemName: "figure.2.and.child.holdinghands")
+                        Image(systemName: "house.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30, height: 30)
                         VStack(alignment: .leading) {
-                            Text("가족이 쓴 돈 합치고")
+                            Text("낸 월세 현금영수증 하고")
                                 .font(.system(size: 15, weight: .bold, design: .default))
-                            Text("18만원 더 받기")
+                            Text("26만원 더 받기")
                                 .font(.system(size: 15, weight: .bold, design: .default))
                                 .foregroundColor(Color.blue)
                         }
@@ -122,25 +122,23 @@ struct YearEndVIew: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color(hex: "#dddddd"))
                     )
-                    HStack(spacing: 30) {
-                        Image(systemName: "figure.2.and.child.holdinghands")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 30, height: 30)
+                    HStack(spacing: 20) {
                         VStack(alignment: .leading) {
-                            Text("가족이 쓴 돈 합치고")
+                            Text("내가 쓴 돈 또래와 비교하기")
                                 .font(.system(size: 15, weight: .bold, design: .default))
-                            Text("18만원 더 받기")
+                            Text("2023년 소비 리포트")
                                 .font(.system(size: 15, weight: .bold, design: .default))
                                 .foregroundColor(Color.blue)
                         }
                         Spacer()
+                        Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
                     }
                     .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color(hex: "#dddddd"))
-                    )
+                    .background(Color(hex:"#ededed"))
+                    .cornerRadius(10)
                 }
             }
             .cornerRadius(10)
