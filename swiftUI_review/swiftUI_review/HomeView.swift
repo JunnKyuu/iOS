@@ -13,7 +13,6 @@ struct HomeView: View {
     enum Tab {
         case tax
         case yeartax
-        case service
         case search
         case more
     }
@@ -32,12 +31,12 @@ struct HomeView: View {
                     Text("연말정산")
                 }
                 .tag(Tab.yeartax)
-            Color.yellow
+            SearchView()
                 .tabItem {
                     Image(systemName: "plus.app")
                     Text("돈찾기")
                 }
-                .tag(Tab.service)
+                .tag(Tab.search)
             Color.blue
                 .tabItem {
                     Image(systemName: "tablecells.fill.badge.ellipsis")
