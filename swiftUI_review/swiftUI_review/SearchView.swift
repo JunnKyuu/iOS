@@ -25,6 +25,12 @@ struct SearchView: View {
                         )
                 }
                 .padding()
+                VStack {
+                    Text("스택1")
+                }
+                VStack {
+                    Text("스택2")
+                }
             }
         }
     }
