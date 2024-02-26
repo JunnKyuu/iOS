@@ -26,11 +26,17 @@ struct SearchView: View {
                 }
                 .padding()
                 VStack {
-                    Text("스택1")
+                    Text("지금까지 사용한 병원비 돌려받아요")
+                    Image(systemName: "house.fill")
+                    Button(action: {
+                        print("Button Tapped!")
+                    }, label: {
+                        Text("병원비 돌려받기")
+                    })
                 }
-                VStack {
-                    Text("스택2")
-                }
+                .padding()
+                .cornerRadius(10)
+                .border(Color(hex: "#dddddd"))
             }
         }
     }
