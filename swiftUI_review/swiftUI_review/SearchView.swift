@@ -26,18 +26,35 @@ struct SearchView: View {
                 }
                 .padding()
                 VStack {
-                    Text("지금까지 사용한 병원비 돌려받아요")
+                    HStack {
+                        Text("지금까지 사용한 병원비\n돌려받아요")
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                        Spacer()
+                    }
                     Image(systemName: "house.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(Color(hex: "#dddddd"))
+                        .padding()
                     Button(action: {
                         print("Button Tapped!")
                     }, label: {
                         Text("병원비 돌려받기")
+                            .font(.system(size: 18, weight: .bold, design: .default))
+                            .foregroundColor(Color(hex: "ffffff"))
                     })
+                    .frame(maxWidth: .infinity, minHeight: 50)
+                    .background(Color(hex: "#6a5acd"))
+                    .cornerRadius(10)
                 }
                 .padding()
-                .cornerRadius(10)
-                .border(Color(hex: "#dddddd"))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(hex: "#dddddd"))
+                )
             }
+            .padding()
         }
     }
 }
