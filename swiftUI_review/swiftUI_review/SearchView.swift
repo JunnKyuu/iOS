@@ -13,7 +13,7 @@ struct SearchView: View {
             VStack {
                 HStack {
                     Text("돈 버는 서비스")
-                        .font(.system(size: 20, weight: .bold, design: .default))
+                        .font(.system(size: 23, weight: .bold, design: .default))
                     Spacer()
                     Text("새 서비스 알림 받기")
                         .font(.system(size: 16, weight: .medium, design: .default))
@@ -25,6 +25,7 @@ struct SearchView: View {
                         )
                 }
                 .padding()
+//                병원비 돌려받기 Stack
                 VStack {
                     HStack {
                         Text("지금까지 사용한 병원비\n돌려받아요")
@@ -51,7 +52,66 @@ struct SearchView: View {
                 .padding()
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(hex: "#dddddd"))
+                        .stroke(Color(hex: "#6a5acd"))
+                )
+            }
+            .padding()
+//            사용만 해도 돈 벌어요 Stack
+            VStack(spacing: 20) {
+                HStack {
+                    Text("사용만 해도 돈 벌어요")
+                        .font(.system(size: 20, weight: .bold, design: .default))
+                    Spacer()
+                }
+                Button(action: {
+                    print("Button Tapped!")
+                }, label: {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("부가서비스 진단")
+                                .font(.system(size: 18, weight: .bold, design: .default))
+                                .foregroundColor(Color(hex: "#000000"))
+                            Text("나도 모르게 새는 돈 막기")
+                                .font(.system(size: 16, weight: .light, design: .default))
+                                .foregroundColor(Color(hex: "#2d2d2d"))
+                        }
+                        Spacer()
+                        Image(systemName: "exclamationmark.octagon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(Color(hex: "000000"))
+                    }
+                })
+                .padding()
+                .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color(hex: "dddddd"))
+                )
+                Button(action: {
+                    print("Button Tapped!")
+                }, label: {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("부가서비스 진단")
+                                .font(.system(size: 18, weight: .bold, design: .default))
+                                .foregroundColor(Color(hex: "#000000"))
+                            Text("나도 모르게 새는 돈 막기")
+                                .font(.system(size: 16, weight: .light, design: .default))
+                                .foregroundColor(Color(hex: "#2d2d2d"))
+                        }
+                        Spacer()
+                        Image(systemName: "exclamationmark.octagon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(Color(hex: "000000"))
+                    }
+                })
+                .padding()
+                .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color(hex: "dddddd"))
                 )
             }
             .padding()
