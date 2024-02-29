@@ -58,7 +58,6 @@
 
 <br>
 
-
 ### 7. DataFlow-SwiftUI
 
 - SwiftUI의 @State, @Binding을 사용한 music player UI 구현
@@ -90,3 +89,9 @@
 ---
 
 <br>
+
+### 11. swiftUI_review
+
+- SwiftUI의 화면 구성을 공부하기 위해 쌈쩜삼 어플 화면 구현
+
+---
