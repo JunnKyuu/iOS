@@ -93,15 +93,15 @@ struct SearchView: View {
                 }, label: {
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("부가서비스 진단")
+                            Text("놓친 월급 찾기")
                                 .font(.system(size: 18, weight: .bold, design: .default))
                                 .foregroundColor(Color(hex: "#000000"))
-                            Text("나도 모르게 새는 돈 막기")
+                            Text("공제 신청하고 월급 올리기")
                                 .font(.system(size: 16, weight: .light, design: .default))
                                 .foregroundColor(Color(hex: "#2d2d2d"))
                         }
                         Spacer()
-                        Image(systemName: "exclamationmark.octagon")
+                        Image(systemName: "dollarsign.arrow.circlepath")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 60, height: 60)
