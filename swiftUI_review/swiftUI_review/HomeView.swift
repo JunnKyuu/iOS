@@ -37,7 +37,7 @@ struct HomeView: View {
                     Text("돈찾기")
                 }
                 .tag(Tab.search)
-            Color.blue
+            MoreView()
                 .tabItem {
                     Image(systemName: "tablecells.fill.badge.ellipsis")
                     Text("더보기")
