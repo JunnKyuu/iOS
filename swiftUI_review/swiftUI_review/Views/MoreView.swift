@@ -32,7 +32,15 @@ struct MoreView: View {
                         Text("내 포인트")
                             .font(.system(size: 20, weight: .bold, design: .default))
                         Spacer()
-                        Text("0P")
+                        Button {
+                            print("Buton Tapped!")
+                        } label: {
+                            HStack(spacing: 5) {
+                                Text("0P")
+                                Image(systemName: "greaterthan")
+                            }
+                        }
+                        .foregroundColor(Color(hex: "000000"))
                     }
                     .padding()
                     HStack(spacing: 50) {
@@ -49,8 +57,8 @@ struct MoreView: View {
                             print("Button Clicked!")
                         }, label: {
                             VStack {
-                                Image(systemName: "cup.and.saucer.fill")
-                                Text("친구초대")
+                                Image(systemName: "person.fill.questionmark")
+                                Text("FAQ")
                             }
                         })
                         .foregroundColor(Color(hex: "#000000"))
@@ -58,8 +66,8 @@ struct MoreView: View {
                             print("Button Clicked!")
                         }, label: {
                             VStack {
-                                Image(systemName: "cup.and.saucer.fill")
-                                Text("친구초대")
+                                Image(systemName: "phone.bubble")
+                                Text("고객센터")
                             }
                         })
                         .foregroundColor(Color(hex: "#000000"))
