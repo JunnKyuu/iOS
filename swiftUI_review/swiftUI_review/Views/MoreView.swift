@@ -26,28 +26,45 @@ struct MoreView: View {
                 VStack {
                     HStack {
                         Image(systemName: "p.circle.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
                         Text("내 포인트")
+                            .font(.system(size: 20, weight: .bold, design: .default))
                         Spacer()
                         Text("0P")
                     }
                     .padding()
-                    .background(Color.yellow)
                     HStack(spacing: 50) {
-                        VStack {
-                            Image(systemName: "cup.and.saucer.fill")
-                            Text("친구초대")
-                        }
-                        VStack {
-                            Image(systemName: "cup.and.saucer.fill")
-                            Text("친구초대")
-                        }
-                        VStack {
-                            Image(systemName: "cup.and.saucer.fill")
-                            Text("친구초대")
-                        }
+                        Button(action: {
+                            print("Button Clicked!")
+                        }, label: {
+                            VStack {
+                                Image(systemName: "cup.and.saucer.fill")
+                                Text("친구초대")
+                            }
+                        })
+                        .foregroundColor(Color(hex: "#000000"))
+                        Button(action: {
+                            print("Button Clicked!")
+                        }, label: {
+                            VStack {
+                                Image(systemName: "cup.and.saucer.fill")
+                                Text("친구초대")
+                            }
+                        })
+                        .foregroundColor(Color(hex: "#000000"))
+                        Button(action: {
+                            print("Button Clicked!")
+                        }, label: {
+                            VStack {
+                                Image(systemName: "cup.and.saucer.fill")
+                                Text("친구초대")
+                            }
+                        })
+                        .foregroundColor(Color(hex: "#000000"))
                     }
                     .padding()
-                    .background(Color(hex: "#dddddd"))
                 }
                 .padding()
                 .overlay(
