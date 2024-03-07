@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TaxView: View {
+    @State private var isActive: Bool = false
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -41,6 +43,7 @@ struct TaxView: View {
 
                     Button {
                         print("Button Tapped")
+                        isActive = true
                     } label: {
                         HStack {
                             VStack(alignment: .leading, spacing: 30) {
@@ -68,6 +71,14 @@ struct TaxView: View {
                         .frame(width: 350, height: 140)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .navigationBarTitle("홈")
+                        .navigationBarHidden(true)
+                        .fullScreenCover(isPresented: $isActive, content: {
+                            NavigationView {
+                                RefundDetailView()
+                                    .navigationBarTitle("환급받기 디테일 뷰")
+                            }
+                        })
                     }
                     HStack(spacing: 15) {
                         Button {

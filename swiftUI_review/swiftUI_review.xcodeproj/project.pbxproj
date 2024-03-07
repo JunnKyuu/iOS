@@ -15,6 +15,7 @@
 		F544F6FF2B60B47200DED0D2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544F6FE2B60B47200DED0D2 /* HomeView.swift */; };
 		F544F7012B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544F7002B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift */; };
 		F544F7032B60BD4F00DED0D2 /* TaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544F7022B60BD4F00DED0D2 /* TaxView.swift */; };
+		F578BA8A2B9A1EFE00A7CA0F /* RefundDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578BA892B9A1EFE00A7CA0F /* RefundDetailView.swift */; };
 		F57EED6F2B93704E0077C045 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57EED6E2B93704E0077C045 /* MoreView.swift */; };
 		F5C2F3312B7C99E1008FE686 /* YearEndVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C2F3302B7C99E1008FE686 /* YearEndVIew.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		F544F6FE2B60B47200DED0D2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F544F7002B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithButtonStyle.swift; sourceTree = "<group>"; };
 		F544F7022B60BD4F00DED0D2 /* TaxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxView.swift; sourceTree = "<group>"; };
+		F578BA892B9A1EFE00A7CA0F /* RefundDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundDetailView.swift; sourceTree = "<group>"; };
 		F57EED6E2B93704E0077C045 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		F5C2F3302B7C99E1008FE686 /* YearEndVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearEndVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				F57EED6E2B93704E0077C045 /* MoreView.swift */,
+				F578BA892B9A1EFE00A7CA0F /* RefundDetailView.swift */,
 				F5311A982B88EBE100FA7A06 /* SearchView.swift */,
 				F5C2F3302B7C99E1008FE686 /* YearEndVIew.swift */,
 				F544F7022B60BD4F00DED0D2 /* TaxView.swift */,
@@ -167,6 +170,7 @@
 				F544F6FF2B60B47200DED0D2 /* HomeView.swift in Sources */,
 				F544F6EF2B60B39500DED0D2 /* ContentView.swift in Sources */,
 				F5311A992B88EBE100FA7A06 /* SearchView.swift in Sources */,
+				F578BA8A2B9A1EFE00A7CA0F /* RefundDetailView.swift in Sources */,
 				F544F6ED2B60B39500DED0D2 /* swiftUI_reviewApp.swift in Sources */,
 				F544F7012B60B76100DED0D2 /* NavigationBarWithButtonStyle.swift in Sources */,
 				F5C2F3312B7C99E1008FE686 /* YearEndVIew.swift in Sources */,
