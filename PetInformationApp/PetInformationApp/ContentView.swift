@@ -25,13 +25,51 @@ struct ContentView: View {
                 .padding(.leading, 20)
             }
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 10) {
                 Text("좋아하는 것")
-                Text("-각종 고기(🐮=🐷=🐔>🐟")
-                Text("-장본게 담겨 있는 종량제 봉투")
-                Text("-집에 새로 온 사람")
+                    .font(.system(size: 20))
+                    .bold()
+                Divider()
+                Text(" - 각종 고기(🐮=🐷=🐔>🐟")
+                Text(" - 장본게 담겨 있는 종량제 봉투")
+                Text(" - 집에 새로 온 사람")
             }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.mint)
+                    .opacity(0.2)
+                    .shadow(radius: 5)
+            
+            )
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Text("스킬")
+                    .font(.system(size: 20))
+                    .bold()
+                Divider()
+                HStack {
+                    Text(" - 앉아")
+                    Spacer()
+                    Text(" - 손")
+                }
+                HStack {
+                    Text(" - 엎드려(앉아와 자주 혼동함)")
+                    Spacer()
+                    Text(" - 코")
+                }
+                Text(" - 하우스(집으로 들어가기)")
+            }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.pink)
+                    .opacity(0.2)
+                    .shadow(radius: 5)
+            )
         }
+        .padding()
+
     }
 }
 #Preview {
