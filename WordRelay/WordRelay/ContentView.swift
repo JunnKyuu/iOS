@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     let title: String = "끝말잇기 게임"
     @State var nextWord: String = ""
+    @State var words: Array<String> = ["물컵", "컵받침", "침착맨" ]
     
     var body: some View {
         VStack {
@@ -34,7 +35,12 @@ struct ContentView: View {
                             .stroke(lineWidth: 2)
                     )
                 Button(action: {
-                    print(nextWord)
+                    if(nextWord.first! == words.last!.last!) {
+                        words.append(nextWord)
+                    } else {
+                        print("다른 단어를 입력해주세요.")
+                    }
+                    nextWord = ""
                 }, label: {
                     Text("확인")
                         .foregroundStyle(Color.white)
@@ -47,6 +53,15 @@ struct ContentView: View {
                 })
             }
             .padding(.vertical, 20)
+            
+            // words View
+            List {
+                ForEach(words.reversed(), id: \.self) { word in
+                    Text(word)
+                        .font(.title2)
+                }
+            }
+            .listStyle(.plain)
             Spacer()
         }
         .padding()
