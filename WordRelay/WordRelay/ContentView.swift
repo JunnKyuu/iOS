@@ -11,6 +11,7 @@ struct ContentView: View {
     let title: String = "끝말잇기 게임"
     @State var nextWord: String = ""
     @State var words: Array<String> = ["물컵", "컵받침", "침착맨" ]
+    @State var showAlert: Bool = false
     
     var body: some View {
         VStack {
@@ -35,12 +36,13 @@ struct ContentView: View {
                             .stroke(lineWidth: 2)
                     )
                 Button(action: {
-                    if(nextWord.first! == words.last!.last!) {
+                    if(words.last?.last!.lowercased() == nextWord.first?.lowercased()) {
                         words.append(nextWord)
                     } else {
-                        print("다른 단어를 입력해주세요.")
+                        showAlert = true
                     }
                     nextWord = ""
+
                 }, label: {
                     Text("확인")
                         .foregroundStyle(Color.white)
@@ -52,7 +54,11 @@ struct ContentView: View {
                         )
                 })
             }
-            .padding(.vertical, 20)
+            .alert("끝말이 이어지는 단어를 입력해주세요.", isPresented: $showAlert) {
+                Button("확인", role: .cancel) {
+                    showAlert = false
+                }
+            }
             
             // words View
             List {
