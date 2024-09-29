@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var todoList : [Todo] = [
+    @State var todoList : [Todo] = [
         Todo(title: "todo1"),
         Todo(title: "todo2"),
         Todo(title: "todo3")
@@ -23,9 +23,8 @@ struct ContentView: View {
                         Image(systemName: todo.isCompleted ? "circle.fill" : "circle")
                             .foregroundStyle(Color.pink)
                             .onTapGesture {
-                                 todo.isCompleted.toggle()
+                                todo.isCompleted.toggle()
                             }
-                        
                         NavigationLink {
                             Text(todo.description)
                         } label: {
@@ -35,8 +34,23 @@ struct ContentView: View {
                         }
                     }
                 }
+                .listRowSeparator(.hidden)
             }
+            .listStyle(.plain)
             .navigationTitle("Jun's Todo List ☑️")
+            .toolbar {
+                ToolbarItem {
+                    EditButton()
+                }
+                ToolbarItem {
+                    Button(action: {
+                        let newTodo: Todo = Todo(title: "새로운 투두")
+                        todoList.append(newTodo)
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            }
         }
     }
 }
