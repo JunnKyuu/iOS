@@ -15,6 +15,14 @@ struct ContentView: View {
         Todo(title: "todo3")
     ]
     
+    func addTodo() {
+        withAnimation {
+            let newTodo: Todo = Todo(title: "새로운 투두")
+            todoList.append(newTodo)
+        }
+        
+    }
+    
     var body: some View {
         NavigationStack {
             List {
@@ -33,20 +41,23 @@ struct ContentView: View {
                                 .foregroundStyle(todo.isCompleted ? Color.gray : Color.primary)
                         }
                     }
+                    .listRowSeparator(.hidden)
                 }
-                .listRowSeparator(.hidden)
+                .onDelete { indexSet in
+                    for index in indexSet {                            todoList.remove(at: index)
+                    }
+                }
+                
             }
             .listStyle(.plain)
             .navigationTitle("Jun's Todo List ☑️")
             .toolbar {
                 ToolbarItem {
                     EditButton()
+                        
                 }
                 ToolbarItem {
-                    Button(action: {
-                        let newTodo: Todo = Todo(title: "새로운 투두")
-                        todoList.append(newTodo)
-                    }, label: {
+                    Button(action: addTodo, label: {
                         Image(systemName: "plus")
                     })
                 }
