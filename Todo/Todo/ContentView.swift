@@ -20,7 +20,12 @@ struct ContentView: View {
             let newTodo: Todo = Todo(title: "새로운 투두")
             todoList.append(newTodo)
         }
-        
+    }
+    
+    func deleteTodo(indexSet: IndexSet) {
+        for index in indexSet {
+            todoList.remove(at: index)
+        }
     }
     
     var body: some View {
@@ -43,10 +48,7 @@ struct ContentView: View {
                     }
                     .listRowSeparator(.hidden)
                 }
-                .onDelete { indexSet in
-                    for index in indexSet {                            todoList.remove(at: index)
-                    }
-                }
+                .onDelete(perform: deleteTodo)
                 
             }
             .listStyle(.plain)
@@ -54,7 +56,6 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem {
                     EditButton()
-                        
                 }
                 ToolbarItem {
                     Button(action: addTodo, label: {
