@@ -23,9 +23,12 @@ struct ContentView: View {
     }
     
     func deleteTodo(indexSet: IndexSet) {
-        for index in indexSet {
-            todoList.remove(at: index)
+        withAnimation{
+            for index in indexSet {
+                todoList.remove(at: index)
+            }
         }
+        
     }
     
     var body: some View {
@@ -39,7 +42,7 @@ struct ContentView: View {
                                 todo.isCompleted.toggle()
                             }
                         NavigationLink {
-                            Text(todo.description)
+                            TodoDetailView(todo: todo)
                         } label: {
                             Text(todo.title)
                                 .strikethrough(todo.isCompleted, color: Color.gray)
