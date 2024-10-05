@@ -16,7 +16,7 @@ struct TodoDetailView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 3)
                 )
-            TextEditor(text: $todo.description)
+            TextEditor(text: $todo.detail)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 3)
                 )
