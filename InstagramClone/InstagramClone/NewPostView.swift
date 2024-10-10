@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct NewPostView: View {
     @State var caption: String = ""
     @Binding var tabIndex: Int
+    @State var selectedItem: PhotosPickerItem?
+    @State var postImage: Image?
+    
+    func convertImage(item: PhotosPickerItem?) async {
+        guard let item: PhotosPickerItem = item else {return}
+        guard let data: Data = try? await item.loadTransferable(type: Data.self) else {return}
+        guard let uiImage: UIImage = UIImage(data: data) else {return}
+        self.postImage = Image(uiImage: uiImage)
+    }
     
     var body: some View {
         VStack {
@@ -21,7 +31,6 @@ struct NewPostView: View {
                     Image(systemName: "chevron.left")
                         .tint(.primary)
                 }
-
                 Spacer()
                 Text("새 게시물")
                     .font(.title2)
@@ -30,9 +39,17 @@ struct NewPostView: View {
             }
             .padding(.horizontal)
             
-            Image("image_lion")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            PhotosPicker(selection: $selectedItem) {
+                Image("image_lion")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            .onChange(of: selectedItem) { oldValue, newValue in
+                task {
+                    await convertImage(item: selectedItem)
+                }
+            }
+            
             TextField("문구를 작성하거나 설문을 추가하세요...", text: $caption)
                 .padding()
             
