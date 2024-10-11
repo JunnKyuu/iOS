@@ -25,7 +25,6 @@ struct NewPostView: View {
         VStack {
             HStack {
                 Button {
-                    print("뒤로가기 버튼 클릭")
                     tabIndex = 0
                 } label: {
                     Image(systemName: "chevron.left")
@@ -40,27 +39,35 @@ struct NewPostView: View {
             .padding(.horizontal)
             
             PhotosPicker(selection: $selectedItem) {
-                Image("image_lion")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                if let image: Image = self.postImage {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical)
+                } else {
+                    Image(systemName: "photo.on.rectangle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                        .padding()
+                }
             }
             .onChange(of: selectedItem) { oldValue, newValue in
-                task {
-                    await convertImage(item: selectedItem)
+                Task {
+                    await convertImage(item: newValue)
                 }
             }
             
             TextField("문구를 작성하거나 설문을 추가하세요...", text: $caption)
                 .padding()
-            
             Spacer()
-
             Button {
                 print("내용: ", caption)
                 print("공유 버튼 클릭")
             } label: {
                 Text("공유")
-                    .frame(width: 363, height: 42)
+                    .frame(width: 363, height: 50)
                     .foregroundStyle(.white)
                     .background(.blue)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
