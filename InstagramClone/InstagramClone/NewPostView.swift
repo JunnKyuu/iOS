@@ -42,8 +42,9 @@ struct NewPostView: View {
                 if let image: Image = self.postImage {
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: .infinity, maxHeight: 400)
+                        .clipped()
                         .padding(.vertical)
                 } else {
                     Image(systemName: "photo.on.rectangle")
