@@ -67,9 +67,9 @@ struct HomeView: View {
                     .padding()
                     .task {
                         let url: URL = URL(string: "https://gvec03gvkf.execute-api.ap-northeast-2.amazonaws.com/")!
-                        let (data, _) : (Data, URLResponse) = try! await URLSession.shared.data(from: url)
+                        guard let (data, _) : (Data, URLResponse) = try? await URLSession.shared.data(from: url) else {return}
                         let decoder: JSONDecoder = JSONDecoder()
-                        let dramaCollection: DramaCollection = try! decoder.decode(DramaCollection.self, from: data)
+                        guard let dramaCollection: DramaCollection = try? decoder.decode(DramaCollection.self, from: data) else {return}
                         bigBanner = dramaCollection.bigBanner
                         dramas = dramaCollection.dramas
                     }
