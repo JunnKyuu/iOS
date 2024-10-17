@@ -56,7 +56,9 @@ struct NewPostView: View {
             Spacer()
             Button {
                 print("내용: ", viewModel.caption)
-                print("공유 버튼 클릭")
+                Task {
+                    await viewModel.uploadPost()
+                }
             } label: {
                 Text("공유")
                     .frame(width: 363, height: 50)
