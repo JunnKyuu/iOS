@@ -9,17 +9,8 @@ import SwiftUI
 import PhotosUI
 
 struct NewPostView: View {
-    @State var caption: String = ""
     @Binding var tabIndex: Int
-    @State var selectedItem: PhotosPickerItem?
-    @State var postImage: Image?
-    
-    func convertImage(item: PhotosPickerItem?) async {
-        guard let item: PhotosPickerItem = item else {return}
-        guard let data: Data = try? await item.loadTransferable(type: Data.self) else {return}
-        guard let uiImage: UIImage = UIImage(data: data) else {return}
-        self.postImage = Image(uiImage: uiImage)
-    }
+    @State var viewModel: NewPostViewModel = NewPostViewModel()
     
     var body: some View {
         VStack {
@@ -38,8 +29,8 @@ struct NewPostView: View {
             }
             .padding(.horizontal)
             
-            PhotosPicker(selection: $selectedItem) {
-                if let image: Image = self.postImage {
+            PhotosPicker(selection: $viewModel.selectedItem) {
+                if let image: Image = self.viewModel.postImage {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -54,17 +45,17 @@ struct NewPostView: View {
                         .padding()
                 }
             }
-            .onChange(of: selectedItem) { oldValue, newValue in
+            .onChange(of: viewModel.selectedItem) { oldValue, newValue in
                 Task {
-                    await convertImage(item: newValue)
+                    await viewModel.convertImage(item: newValue)
                 }
             }
             
-            TextField("문구를 작성하거나 설문을 추가하세요...", text: $caption)
+            TextField("문구를 작성하거나 설문을 추가하세요...", text: $viewModel.caption)
                 .padding()
             Spacer()
             Button {
-                print("내용: ", caption)
+                print("내용: ", viewModel.caption)
                 print("공유 버튼 클릭")
             } label: {
                 Text("공유")
