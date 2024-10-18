@@ -8,9 +8,9 @@
 import Foundation
 
 struct Post: Codable {
-    var id: String
-    var caption: String
-    var imageURL: String
+    let id: String
+    let caption: String
+    let imageURL: String
     var like: Int
-    var date: Date
+    let date: Date
 }
