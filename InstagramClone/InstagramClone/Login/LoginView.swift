@@ -41,8 +41,8 @@ struct LoginView: View {
                         }
                         .padding(.horizontal)
                     
-                    NavigationLink {
-                        EnterEmailView()
+                    Button {
+                        print("로그인 버튼 클릭")
                     } label: {
                         Text("로그인")
                             .frame(maxWidth: 363, maxHeight: 42)
@@ -50,12 +50,11 @@ struct LoginView: View {
                             .background(.blue)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
-                    
                     Text("비밀번호를 잊으셨나요?")
                 }
                 Spacer()
-                Button {
-                    print("새 계정 만들기 버튼 클릭")
+                NavigationLink {
+                    EnterEmailView()
                 } label: {
                     Text("새 계정 만들기")
                         .fontWeight(.bold)

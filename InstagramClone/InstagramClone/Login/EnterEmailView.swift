@@ -28,7 +28,7 @@ struct EnterEmailView: View {
                     .overlay(RoundedRectangle(cornerRadius: 10)
                         .stroke(.gray, lineWidth: 2))
                 Button {
-                    dismiss()
+                    print("다음 버튼 클릭")
                 } label: {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)
@@ -39,6 +39,17 @@ struct EnterEmailView: View {
                 Spacer()
             }
             .padding(.horizontal)
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .tint(.black)
+                }
+            }
         }
     }
 }
