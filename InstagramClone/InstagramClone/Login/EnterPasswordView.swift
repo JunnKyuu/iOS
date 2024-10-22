@@ -1,36 +1,36 @@
 //
-//  EnterEmailView.swift
+//  EnterPasswordView.swift
 //  InstagramClone
 //
-//  Created by JunKyu Lee on 10/20/24.
+//  Created by JunKyu Lee on 10/21/24.
 //
 
 import SwiftUI
 
-struct EnterEmailView: View {
+struct EnterPasswordView: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
         ZStack {
             GradientBackgroundView()
             VStack {
-                Text("이메일 주소 입력")
+                Text("비밀번호 만들기")
                     .foregroundStyle(.black)
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 5)
-                Text("회원님에게 연락할 수 있는 이메일 주소를 입력하세요. 이 이메일 주소는 프로필에서 다른 사람에게 공개되지 않습니다.")
+                Text("다른 사람이 추측할 수 없는 6자 이상의 문자 또는 숫자로 비밀번호를 만드세요.")
                     .foregroundStyle(.black)
                     .font(.callout)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
-                TextField("이메일 주소", text: .constant(""))
+                SecureField("비밀번호", text: .constant(""))
                     .foregroundStyle(.black)
                     .padding(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                         .stroke(.gray, lineWidth: 2))
                 NavigationLink {
-                    EnterPasswordView()
+                    EnterNameView()
                 } label: {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)
@@ -47,7 +47,7 @@ struct EnterEmailView: View {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
                     dismiss()
-                } label: {
+                } label : {
                     Image(systemName: "chevron.left")
                         .tint(.black)
                 }
@@ -57,5 +57,5 @@ struct EnterEmailView: View {
 }
 
 #Preview {
-    EnterEmailView()
+    EnterPasswordView()
 }

@@ -20,6 +20,7 @@ struct LoginView: View {
                 Spacer()
                 VStack {
                     TextField("이메일 주소", text: .constant(""))
+                        .foregroundStyle(.black)
                         .textInputAutocapitalization(.never)
                         .padding(12)
                         .background(.white)
