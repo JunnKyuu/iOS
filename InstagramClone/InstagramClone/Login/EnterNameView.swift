@@ -19,13 +19,13 @@ struct EnterNameView: View {
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 5)
-                SecureField("비밀번호", text: .constant(""))
+                TextField("비밀번호", text: .constant(""))
                     .foregroundStyle(.black)
                     .padding(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                         .stroke(.gray, lineWidth: 2))
-                Button {
-                    print("다음 버튼 클릭")
+                NavigationLink {
+                    CompleteSignUpView()
                 } label: {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)

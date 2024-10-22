@@ -30,7 +30,6 @@ struct LoginView: View {
                                 .stroke(.gray, lineWidth: 1)
                         }
                         .padding(.horizontal)
-                    
                     SecureField("비밀번호", text: .constant(""))
                         .textInputAutocapitalization(.never)
                         .padding(12)
@@ -41,7 +40,6 @@ struct LoginView: View {
                                 .stroke(.gray, lineWidth: 1)
                         }
                         .padding(.horizontal)
-                    
                     Button {
                         print("로그인 버튼 클릭")
                     } label: {
