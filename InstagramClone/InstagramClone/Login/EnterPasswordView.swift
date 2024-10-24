@@ -24,18 +24,14 @@ struct EnterPasswordView: View {
                     .font(.callout)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
-                SecureField("비밀번호", text: .constant(""))
-                    .foregroundStyle(.black)
-                    .padding(10)
-                    .overlay(RoundedRectangle(cornerRadius: 10)
-                        .stroke(.gray, lineWidth: 2))
+                SecureField("비밀번호", text: .constant(""))                        .modifier(InstagramTextFieldModifier())
                 NavigationLink {
                     EnterNameView()
                 } label: {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)
                         .foregroundStyle(.white)
-                        .background(.blue)
+                        .background(.cyan)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 Spacer()
@@ -49,7 +45,7 @@ struct EnterPasswordView: View {
                     dismiss()
                 } label : {
                     Image(systemName: "chevron.left")
-                        .tint(.black)
+                        .tint(.cyan)
                 }
             }
         }

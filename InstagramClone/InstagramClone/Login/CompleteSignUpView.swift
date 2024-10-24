@@ -41,7 +41,7 @@ struct CompleteSignUpView: View {
                     Text("완료")
                         .frame(maxWidth: .infinity, maxHeight: 42)
                         .foregroundStyle(.white)
-                        .background(.blue)
+                        .background(.cyan)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 Spacer()
@@ -54,7 +54,7 @@ struct CompleteSignUpView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "chevron.left")
-                            .tint(.black)
+                            .tint(.cyan)
                     }
                 }
             }

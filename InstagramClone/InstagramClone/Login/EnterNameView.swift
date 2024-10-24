@@ -19,18 +19,15 @@ struct EnterNameView: View {
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 5)
-                TextField("비밀번호", text: .constant(""))
-                    .foregroundStyle(.black)
-                    .padding(10)
-                    .overlay(RoundedRectangle(cornerRadius: 10)
-                        .stroke(.gray, lineWidth: 2))
+                TextField("이름", text: .constant(""))
+                    .modifier(InstagramTextFieldModifier())
                 NavigationLink {
                     CompleteSignUpView()
                 } label: {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)
                         .foregroundStyle(.white)
-                        .background(.blue)
+                        .background(.cyan)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 Spacer()
@@ -44,7 +41,7 @@ struct EnterNameView: View {
                     dismiss()
                 } label : {
                     Image(systemName: "chevron.left")
-                        .tint(.black)
+                        .tint(.cyan)
                 }
             }
         }

@@ -24,18 +24,14 @@ struct EnterEmailView: View {
                     .font(.callout)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
-                TextField("이메일 주소", text: .constant(""))
-                    .foregroundStyle(.black)
-                    .padding(10)
-                    .overlay(RoundedRectangle(cornerRadius: 10)
-                        .stroke(.gray, lineWidth: 2))
+                TextField("이메일 주소", text: .constant(""))                    .modifier(InstagramTextFieldModifier())
                 NavigationLink {
                     EnterPasswordView()
                 } label: {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)
                         .foregroundStyle(.white)
-                        .background(.blue)
+                        .background(.cyan)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 Spacer()
@@ -49,7 +45,7 @@ struct EnterEmailView: View {
                     dismiss()
                 } label: {
                     Image(systemName: "chevron.left")
-                        .tint(.black)
+                        .tint(.cyan)
                 }
             }
         }

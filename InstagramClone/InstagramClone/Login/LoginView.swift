@@ -16,38 +16,21 @@ struct LoginView: View {
                 Image("instagramLogo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 57, height: 57)
+                    .frame(width: 90, height: 90)
                 Spacer()
                 VStack {
                     TextField("이메일 주소", text: .constant(""))
-                        .foregroundStyle(.black)
-                        .textInputAutocapitalization(.never)
-                        .padding(12)
-                        .background(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.gray, lineWidth: 1)
-                        }
-                        .padding(.horizontal)
+                        .modifier(InstagramTextFieldModifier())
                     SecureField("비밀번호", text: .constant(""))
-                        .textInputAutocapitalization(.never)
-                        .padding(12)
-                        .background(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.gray, lineWidth: 1)
-                        }
-                        .padding(.horizontal)
+                        .modifier(InstagramTextFieldModifier())
                     Button {
                         print("로그인 버튼 클릭")
                     } label: {
                         Text("로그인")
-                            .frame(maxWidth: 363, maxHeight: 42)
+                            .frame(maxWidth: .infinity, maxHeight: 42)
                             .foregroundStyle(.white)
-                            .background(.blue)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .background(.cyan)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                     Text("비밀번호를 잊으셨나요?")
                 }
@@ -57,14 +40,16 @@ struct LoginView: View {
                 } label: {
                     Text("새 계정 만들기")
                         .fontWeight(.bold)
-                        .frame(maxWidth: 363, maxHeight: 42)
+                        .frame(maxWidth: .infinity, maxHeight: 42)
                         .overlay {
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(.blue, lineWidth: 1)
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.cyan, lineWidth: 1)
                         }
                 }
+                .padding(.bottom, 30)
             }
         }
+        .padding(.horizontal)
         
     }
 }
