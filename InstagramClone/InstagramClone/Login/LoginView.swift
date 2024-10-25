@@ -34,6 +34,8 @@ struct LoginView: View {
                     }
                     Text("비밀번호를 잊으셨나요?")
                 }
+                .padding(.horizontal)
+
                 Spacer()
                 NavigationLink {
                     EnterEmailView()
@@ -46,10 +48,9 @@ struct LoginView: View {
                                 .stroke(.cyan, lineWidth: 1)
                         }
                 }
-                .padding(.bottom, 30)
+                .padding(.horizontal)
             }
         }
-        .padding(.horizontal)
         
     }
 }

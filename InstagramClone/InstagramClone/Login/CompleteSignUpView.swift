@@ -44,6 +44,7 @@ struct CompleteSignUpView: View {
                         .background(.cyan)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
+                .padding(.horizontal)
                 Spacer()
                 
             }
@@ -59,7 +60,6 @@ struct CompleteSignUpView: View {
                 }
             }
         }
-        .padding()
     }
 }
 
