@@ -29,7 +29,7 @@ struct LoginView: View {
                         Text("로그인")
                             .frame(maxWidth: .infinity, maxHeight: 42)
                             .foregroundStyle(.white)
-                            .background(.cyan)
+                            .background(.blue)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                     Text("비밀번호를 잊으셨나요?")
@@ -41,11 +41,11 @@ struct LoginView: View {
                     EnterEmailView()
                 } label: {
                     Text("새 계정 만들기")
-                        .fontWeight(.bold)
+                        .foregroundStyle(.blue)
                         .frame(maxWidth: .infinity, maxHeight: 42)
                         .overlay {
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(.cyan, lineWidth: 1)
+                                .stroke(.blue, lineWidth: 1)
                         }
                 }
                 .padding(.horizontal)

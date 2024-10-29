@@ -27,7 +27,7 @@ struct EnterNameView: View {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)
                         .foregroundStyle(.white)
-                        .background(.cyan)
+                        .background(.blue)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 Spacer()
@@ -41,7 +41,7 @@ struct EnterNameView: View {
                     dismiss()
                 } label : {
                     Image(systemName: "chevron.left")
-                        .tint(.cyan)
+                        .tint(.primary)
                 }
             }
         }
