@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct EnterEmailView: View {
-    @Environment(\.dismiss) var dismiss
     var body: some View {
-        ZStack {
-            GradientBackgroundView()
+        SignUpBackgroundView {
             VStack {
                 Text("이메일 주소 입력")
                     .foregroundStyle(.black)
@@ -36,18 +34,7 @@ struct EnterEmailView: View {
                 }
                 Spacer()
             }
-            .padding(.horizontal)
-        }
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .tint(.primary)
-                }
-            }
+
         }
     }
 }
