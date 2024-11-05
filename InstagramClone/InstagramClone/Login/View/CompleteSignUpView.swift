@@ -35,14 +35,10 @@ struct CompleteSignUpView: View {
                     .font(.title)
                     .padding(.horizontal, 12)
                 Spacer()
-                Button {
+                BlueButtonView {
                     print("완료 버튼 클릭")
-                } label: {
+                } content: {
                     Text("완료")
-                        .frame(maxWidth: .infinity, maxHeight: 42)
-                        .foregroundStyle(.white)
-                        .background(.blue)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 .padding(.horizontal)
                 Spacer()

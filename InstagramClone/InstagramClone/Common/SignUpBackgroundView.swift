@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignUpBackgroundView <Content: View>: View {
+    @Environment(\.dismiss) var dismiss
     let content: Content
     
     init(@ViewBuilder content: () -> Content) {
@@ -15,7 +16,6 @@ struct SignUpBackgroundView <Content: View>: View {
     }
     
     var body: some View {
-        @Environment(\.dismiss) var dismiss
         ZStack {
             GradientBackgroundView()
             content

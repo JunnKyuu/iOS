@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isLogin: Bool = false
+    
     var body: some View {
-        MainTabView()
+        if isLogin {
+            MainTabView()
+        } else {
+            LoginView()
+        }
+        
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(isLogin: false)
 }

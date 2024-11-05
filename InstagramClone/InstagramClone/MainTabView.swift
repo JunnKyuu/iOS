@@ -36,8 +36,7 @@ struct MainTabView: View {
                 }
                 .tag(3)
             
-//            Text("Profile")
-            LoginView()
+            Text("Profile")
                 .tabItem {
                     Image(systemName: "person.circle.fill")
                 }
