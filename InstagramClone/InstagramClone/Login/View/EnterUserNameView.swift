@@ -1,13 +1,13 @@
 //
-//  EnterEmailView.swift
+//  EnterUserNameView.swift
 //  InstagramClone
 //
-//  Created by JunKyu Lee on 10/20/24.
+//  Created by JunKyu Lee on 11/6/24.
 //
 
 import SwiftUI
 
-struct EnterEmailView: View {
+struct EnterUserNameView: View {
     @Environment(SignUpViewModel.self) var signUpViewModel: SignUpViewModel
     
     var body: some View {
@@ -15,20 +15,21 @@ struct EnterEmailView: View {
         
         SignUpBackgroundView {
             VStack {
-                Text("이메일 주소 입력")
+                Text("사용자 이름 입력")
                     .foregroundStyle(.black)
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 5)
-                Text("회원님에게 연락할 수 있는 이메일 주소를 입력하세요. 이 이메일 주소는 프로필에서 다른 사람에게 공개되지 않습니다.")
+                Text("사용자 이름을 직접 추가하거나 추천 이름을 사용하세요. 언제든지 변경할 수 있습니다.")
                     .foregroundStyle(.black)
                     .font(.callout)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
-                TextField("이메일 주소", text: $signUpViewModel.email)                    .modifier(InstagramTextFieldModifier())
+                TextField("사용자 이름", text: $signUpViewModel.userName)
+                    .modifier(InstagramTextFieldModifier())
                 NavigationLink {
-                    EnterPasswordView()
+                    CompleteSignUpView()
                 } label: {
                     Text("다음")
                         .frame(maxWidth: .infinity, maxHeight: 42)
@@ -38,11 +39,10 @@ struct EnterEmailView: View {
                 }
                 Spacer()
             }
-
         }
     }
 }
 
 #Preview {
-    EnterEmailView()
+    EnterUserNameView()
 }

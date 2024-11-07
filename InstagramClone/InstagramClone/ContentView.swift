@@ -6,20 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
-    @State var isLogin: Bool = false
+    @State var signUpViewModel: SignUpViewModel = SignUpViewModel()
     
     var body: some View {
-        if isLogin {
+        if AuthManager.shared.currentUserSession != nil {
             MainTabView()
         } else {
             LoginView()
+                .environment(signUpViewModel)
         }
         
     }
 }
 
 #Preview {
-    ContentView(isLogin: false)
+    ContentView()
 }
