@@ -13,7 +13,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $tabIndex) {
-            Text("Feed")
+             Text("Feed")
                 .tabItem {
                     Image(systemName: "house")
                 }
@@ -33,7 +33,7 @@ struct MainTabView: View {
             VStack {
                 Text("Reels")
                 Button {
-                    AuthManager.shared.signOut()
+                    AuthManager.shared.signout()
                 } label: {
                     Text("로그아웃")
                 }
@@ -43,7 +43,8 @@ struct MainTabView: View {
                 }
                 .tag(3)
             
-            Text("Profile")
+//            Text("Profile")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.circle.fill")
                 }
