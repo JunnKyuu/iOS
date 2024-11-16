@@ -45,6 +45,15 @@ class AuthManager {
         }
     }
     
+    func signin(email: String, password: String) async {
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            currentUserSession = result.user
+        } catch {
+            print("DEBUG: Failed to sign in with error \(error.localizedDescription)")
+        }
+    }
+    
     func signOut() {
         do {
             try Auth.auth().signOut()
