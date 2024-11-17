@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var viewModel: ProfileViewModel = ProfileViewModel()
+
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 2),
         GridItem(.flexible(), spacing: 2),
@@ -18,7 +20,7 @@ struct ProfileView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Text("junnkyuu22")
+                    Text("\(viewModel.user?.userName ?? "기본값")")
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
@@ -49,16 +51,16 @@ struct ProfileView: View {
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 10)
-                    Text("여기는 이름(name)을 쓰는 곳입니다.")
+                    Text("\(viewModel.user?.name ?? "")")
                         .font(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
-                    Text("여기는 소개(bio)를 쓰는 곳입니다.")
+                    Text("\(viewModel.user?.bio ?? "")")
                         .font(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                     NavigationLink {
-                        ProfileEditingView()
+                        ProfileEditingView(viewModel: viewModel)
                     } label: {
                         Text("프로필 편집")
                             .fontWeight(.bold)
@@ -88,10 +90,10 @@ struct ProfileView: View {
                                 .scaledToFit()
                         }
                     }
+                    Spacer()
                 }
             }
         }
-        Spacer()
     }
 }
 

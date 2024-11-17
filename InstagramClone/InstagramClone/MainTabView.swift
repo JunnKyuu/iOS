@@ -42,8 +42,6 @@ struct MainTabView: View {
                     Image(systemName: "movieclapper.fill")
                 }
                 .tag(3)
-            
-//            Text("Profile")
             ProfileView()
                 .tabItem {
                     Image(systemName: "person.circle.fill")

@@ -35,6 +35,7 @@
 		F55C11DF2CBCF3BA007E4064 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F55C11DE2CBCF3BA007E4064 /* FirebaseFirestore */; };
 		F55C11E12CBCF3BA007E4064 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F55C11E02CBCF3BA007E4064 /* FirebaseStorage */; };
 		F5F9AC982CE85C5800576C32 /* ProfileEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9AC972CE85C5800576C32 /* ProfileEditingView.swift */; };
+		F5F9AC9A2CE8644D00576C32 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9AC992CE8644D00576C32 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		F51D20F32CE837E00065A4AF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		F5DC2C942CB4FF9C00809033 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F9AC972CE85C5800576C32 /* ProfileEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditingView.swift; sourceTree = "<group>"; };
+		F5F9AC992CE8644D00576C32 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				F51D20ED2CE837E00065A4AF /* ProfileView.swift */,
 				F5F9AC972CE85C5800576C32 /* ProfileEditingView.swift */,
+				F5F9AC992CE8644D00576C32 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				F51D21002CE837E00065A4AF /* LoginView.swift in Sources */,
 				F51D21012CE837E00065A4AF /* AuthManager.swift in Sources */,
 				F51D21022CE837E00065A4AF /* Post.swift in Sources */,
+				F5F9AC9A2CE8644D00576C32 /* ProfileViewModel.swift in Sources */,
 				F51D21032CE837E00065A4AF /* User.swift in Sources */,
 				F51D21042CE837E00065A4AF /* NewPostView.swift in Sources */,
 				F51D21052CE837E00065A4AF /* NewPostViewModel.swift in Sources */,
