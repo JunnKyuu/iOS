@@ -35,7 +35,7 @@ struct CompleteSignUpView: View {
                         .opacity(0.8)
                 }
                 .padding(.bottom, 20)
-                Text("\(signUpViewModel.userName)님, Instagram에 오신 것을 환영합니다.")
+                Text("\(signUpViewModel.username)님, Instagram에 오신 것을 환영합니다.")
                     .font(.title)
                     .padding(.horizontal, 12)
                 Spacer()

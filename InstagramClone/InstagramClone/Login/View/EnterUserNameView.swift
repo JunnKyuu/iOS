@@ -26,7 +26,7 @@ struct EnterUserNameView: View {
                     .font(.callout)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom)
-                TextField("사용자 이름", text: $signUpViewModel.userName)
+                TextField("사용자 이름", text: $signUpViewModel.username)
                     .modifier(InstagramTextFieldModifier())
                 NavigationLink {
                     CompleteSignUpView()

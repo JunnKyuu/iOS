@@ -13,13 +13,13 @@ class SignUpViewModel {
     var email: String = ""
     var password: String = ""
     var name: String = ""
-    var userName: String = ""
+    var username: String = ""
     
     func createUser() async {
-        await AuthManager.shared.createUser(email: email, password: password, name: name, userName: userName)
+        await AuthManager.shared.createUser(email: email, password: password, name: name, username: username)
         email = ""
         password = ""
         name = ""
-        userName = ""
+        username = ""
     }
 }

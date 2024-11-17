@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import PhotosUI
+import Kingfisher
 
 struct ProfileEditingView: View {
     @Environment(\.dismiss) var dismiss
@@ -13,12 +15,44 @@ struct ProfileEditingView: View {
     
     var body: some View {
         VStack {
-            Image("profile_panda")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .clipShape(Circle())
-            Text("사진 또는 아바타 수정")
-                .foregroundStyle(.tint)
+            PhotosPicker(selection: $viewModel.selectedItem) {
+                VStack {
+                    if let profileImage = viewModel.profileImage {
+                        profileImage
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    } else if let imageUrl = viewModel.user?.profileImageUrl {
+                        let url = URL(string: imageUrl)
+//                            AsyncImage(url: url) { image in
+//                                image
+//                                    .resizable()
+//                                    .frame(width: 100, height: 100)
+//                                    .clipShape(Circle())
+//                            } placeholder: {
+//                                ProgressView()
+//                            }
+                        KFImage(url)
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    } else {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .foregroundStyle(.gray)
+                            .opacity(0.5)
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    }
+                    Text("사진 또는 아바타 수정")
+                        .foregroundStyle(.tint)
+                }
+            }
+            .onChange(of: viewModel.selectedItem) { oldValue, newValue in
+                Task {
+                    await viewModel.convertImage(item: newValue)
+                }
+            }
             VStack(alignment: .leading, spacing: 5) {
                 Text("이름")
                     .foregroundStyle(.gray)
@@ -58,7 +92,10 @@ struct ProfileEditingView: View {
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
-                    dismiss()
+                    Task {
+                        await viewModel.updateUser()
+                        dismiss()
+                    }
                 } label: {
                     Image(systemName: "arrow.backward")
                         .tint(.black)

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
     @State var viewModel: ProfileViewModel = ProfileViewModel()
@@ -20,16 +21,31 @@ struct ProfileView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Text("\(viewModel.user?.userName ?? "기본값")")
+                    Text("\(viewModel.username)")
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                     HStack {
-                        Image(systemName: "person.circle.fill")
-                            .resizable()
-                            .frame(width: 75, height: 75)
-                            .opacity(0.6)
-                            .frame(maxWidth: .infinity)
+                        if let profileImage = viewModel.profileImage {
+                            profileImage
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .clipShape(Circle())
+                        } else if let imageUrl = viewModel.user?.profileImageUrl {
+                            let url = URL(string: imageUrl)
+                            KFImage(url)
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .clipShape(Circle())
+                            
+                        } else {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .foregroundStyle(.gray)
+                                .opacity(0.5)
+                                .frame(width: 100, height: 100)
+                                .clipShape(Circle())
+                        }
                         VStack {
                             Text("124")
                                 .fontWeight(.semibold)
@@ -51,11 +67,11 @@ struct ProfileView: View {
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 10)
-                    Text("\(viewModel.user?.name ?? "")")
+                    Text("\(viewModel.name)")
                         .font(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
-                    Text("\(viewModel.user?.bio ?? "")")
+                    Text("\(viewModel.bio)")
                         .font(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)

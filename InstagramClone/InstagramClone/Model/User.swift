@@ -10,7 +10,7 @@ import Foundation
 struct User: Codable {
     var userId: String
     var email: String
-    var userName: String
+    var username: String
     var name: String
     var bio: String?
     var profileImageUrl: String?

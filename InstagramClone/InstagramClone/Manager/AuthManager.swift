@@ -23,24 +23,24 @@ class AuthManager {
         }
     }
     
-    func createUser(email: String, password: String, name: String, userName: String) async {
+    func createUser(email: String, password: String, name: String, username: String) async {
         print("email: ", email)
         print("password: ", password)
         print("name: ", name)
-        print("userName: ", userName)
+        print("username: ", username)
         
         do {
             let result: AuthDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
             currentAuthUser = result.user
             guard let userId: String = currentAuthUser?.uid else { return }
-            await uploadUserData(userId: userId, email: email, userName: userName, name: name)
+            await uploadUserData(userId: userId, email: email, username: username, name: name)
         } catch {
             print("DEBUG: Failed to create user with error \(error.localizedDescription)")
         }
     }
     
-    func uploadUserData(userId: String, email: String, userName: String, name: String) async {
-        let user: User = User(userId: userId, email: email, userName: userName, name: name)
+    func uploadUserData(userId: String, email: String, username: String, name: String) async {
+        let user: User = User(userId: userId, email: email, username: username, name: name)
         self.currentUser = user
         do {
             let encodedUser = try Firestore.Encoder().encode(user)
