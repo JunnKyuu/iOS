@@ -28,10 +28,11 @@ class NewPostViewModel {
     func uploadPost() async {
         guard let uiImage: UIImage = self.uiImage else { return }
         guard let imageURL: String = await uploadImage(uiImage: uiImage) else { return }
+        guard let userId = AuthManager.shared.currentAuthUser?.uid else { return }
         
         // fireStore에 collection, document 만들기 -> 보낼 Post 만들기 -> post encode -> 만든 collection, document에 올리기
         let postReference: DocumentReference = Firestore.firestore().collection("posts").document()
-        let post: Post = Post(id: postReference.documentID, caption: caption, imageURL: imageURL, like: 0, date: Date())
+        let post: Post = Post(id: postReference.documentID, userId: userId, caption: caption, imageURL: imageURL, like: 0, date: Date())
         
         do {
             let encodedData = try Firestore.Encoder().encode(post)

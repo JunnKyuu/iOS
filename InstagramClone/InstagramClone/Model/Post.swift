@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Post: Codable {
+struct Post: Codable, Identifiable {
     let id: String
+    let userId: String
     let caption: String
     let imageURL: String
     var like: Int

@@ -16,6 +16,7 @@ class ProfileViewModel {
     var name: String
     var username: String
     var bio: String
+    var posts: [Post] = []
     
     var selectedItem: PhotosPickerItem?
     var profileImage: Image?
@@ -97,6 +98,20 @@ class ProfileViewModel {
         } catch {
             print("DEBUG: Fail to upload image with error \(error.localizedDescription)")
             return nil
+        }
+    }
+    
+    func loadUserPosts() async {
+        do {
+            let documents = try await Firestore.firestore().collection("posts").order(by: "date", descending: true)
+                .whereField("userId", isEqualTo: user?.userId ?? " ").getDocuments().documents
+            for document in documents {
+                let post = try document.data(as: Post.self)
+                posts.append(post)
+            }
+            self.posts = posts
+        } catch {
+            print("DEBUG: Failed to load user posts with error \(error.localizedDescription)")
         }
     }
 }
